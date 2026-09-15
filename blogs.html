@@ -1,0 +1,2156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Blog | HiringGo</title>
+<meta name="description" content="Stay informed and up-to-date with our in-depth blog articles on manpower supply, staffing, recruitment solutions, and more for your business.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: oklch(0.2 0.03 255);
+    --ink-soft: oklch(0.38 0.03 255);
+    --navy: #0b1f3a;
+    --navy-dark: #0a1628;
+    --paper: oklch(0.985 0.004 90);
+    --paper-alt: oklch(0.958 0.012 80);
+    --gold: #00adf2;
+    --gold-ink: #0077a8;
+    --line: oklch(0.88 0.012 90);
+    --line-on-navy: oklch(1 0 0 / 0.16);
+    --white: oklch(1 0 0);
+    --display: "Archivo", "Arial Black", Arial, sans-serif;
+    --body:
+      "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: var(--body);
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  ul { margin: 0; padding: 0; list-style: none; }
+  h1, h2, h3, h4 {
+    font-family: var(--display);
+    line-height: 1.12;
+    margin: 0 0 .5em;
+    letter-spacing: -0.01em;
+  }
+  p { margin: 0 0 1em; }
+  section { padding: clamp(3.5rem, 7vw, 6.5rem) 0; }
+  .wrap {
+    width: min(1180px, 100% - 2.5rem);
+    margin-inline: auto;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .5em;
+    font-family: var(--display);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--gold-ink);
+    margin-bottom: 1rem;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 26px;
+    height: 2px;
+    background: var(--gold);
+    display: inline-block;
+  }
+  .section-head { max-width: 640px; margin-bottom: 3rem; }
+  .section-head h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); color: var(--ink); }
+  .section-head p { color: var(--ink-soft); font-size: 1.05rem; margin-bottom: 0; }
+  .section-head.center { max-width: 680px; margin-inline: auto; text-align: center; }
+  .section-head.center .eyebrow::before { display: none; }
+  .section-head.on-navy h2 { color: var(--white); }
+  .section-head.on-navy p { color: oklch(1 0 0 / 0.72); }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6em;
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: .85rem;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    padding: 1em 1.9em;
+    border-radius: 0;
+    border: none;
+    cursor: pointer;
+    transition: filter .15s ease, transform .15s ease;
+    white-space: nowrap;
+  }
+  .btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
+  .btn svg { width: 16px; height: 16px; }
+  .btn-gold { background: var(--gold); color: var(--navy-dark); }
+  .btn-navy { background: var(--navy); color: var(--white); }
+  .btn-outline-navy {
+    background: transparent;
+    border: 1.5px solid oklch(1 0 0 / 0.35);
+    color: var(--white);
+  }
+  .btn-outline-navy:hover { border-color: var(--white); filter: none; }
+  .btn-outline-ink {
+    background: transparent;
+    border: 1.5px solid var(--ink);
+    color: var(--ink);
+  }
+  .btn-outline-ink:hover { border-color: var(--gold); color: var(--gold-ink); filter: none; }
+  .btn-ghost-link {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: .78rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--gold-ink);
+    display: inline-flex;
+    align-items: center;
+    gap: .4em;
+  }
+  .btn-ghost-link svg { width: 14px; height: 14px; transition: transform .15s ease; }
+  .btn-ghost-link:hover svg { transform: translateX(3px); }
+
+  /* ---------- Header (mega-menu, from Recruitment.html) ---------- */
+  header.site {
+    position: sticky;
+    top: 0;
+    z-index: 80;
+    width: 100%;
+    background: var(--navy-dark);
+    border-bottom: 1px solid var(--line-on-navy);
+  }
+  .nav-bar {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 2.2rem;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+  }
+  .brand { display: flex; align-items: center; gap: .6rem; }
+  .brand-mark { width: 14px; height: 14px; background: var(--gold); flex: none; }
+  .brand-name {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 1.375rem;
+    color: var(--white);
+    letter-spacing: -0.01em;
+  }
+  .nav-links { display: flex; align-items: center; gap: 2.25rem; }
+  .nav-plain { font-size: .9375rem; font-weight: 500; color: oklch(1 0 0 / 0.82); }
+  .nav-plain:hover { color: var(--white); }
+
+  .dd-trigger { position: relative; padding: .75rem 0; cursor: pointer; }
+  .dd-label {
+    display: flex; align-items: center; gap: .4rem;
+    font-size: .9375rem; font-weight: 600; color: var(--white);
+  }
+  .dd-chevron { transition: transform .15s ease; flex: none; }
+  .dd-trigger:hover .dd-chevron { transform: rotate(180deg); }
+  .dd-panel {
+    position: absolute; top: 100%; left: -1.5rem;
+    opacity: 0; visibility: hidden; transform: translateY(-6px);
+    transition: opacity .16s ease, transform .16s ease, visibility .16s;
+    pointer-events: none;
+    background: var(--paper);
+    box-shadow: 0 28px 56px -16px oklch(0.2 0.03 255 / 0.45);
+    border-top: 3px solid var(--gold);
+    padding: 1.375rem;
+    display: flex; flex-direction: column;
+    z-index: 50;
+    width: 280px;
+  }
+  .dd-trigger:hover .dd-panel { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; }
+  .dd-eyebrow {
+    font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--gold-ink); margin-bottom: .5rem;
+  }
+  .dd-sub { position: relative; }
+  .dd-item {
+    display: flex; align-items: center; justify-content: space-between; gap: .6rem;
+    font-size: .906rem; font-weight: 500; color: var(--ink); padding: .5rem 0;
+    transition: color .15s ease, padding-left .15s ease;
+  }
+  .dd-item:hover, .dd-sub:hover > .dd-item { color: var(--gold-ink); padding-left: .25rem; }
+  .dd-item.featured { color: var(--gold-ink); font-weight: 700; }
+  .dd-item svg { flex: none; }
+  .dd-flyout {
+    position: absolute; left: 100%; top: -.25rem; margin-left: .125rem;
+    min-width: 230px;
+    background: var(--paper);
+    box-shadow: 0 28px 56px -16px oklch(0.2 0.03 255 / 0.45);
+    border-top: 3px solid var(--gold);
+    padding: 1.1rem 1.25rem;
+    display: flex; flex-direction: column;
+    opacity: 0; visibility: hidden; transform: translateX(-6px);
+    transition: opacity .16s ease, transform .16s ease, visibility .16s;
+    pointer-events: none;
+    z-index: 60;
+  }
+  .dd-sub:hover > .dd-flyout { opacity: 1; visibility: visible; transform: translateX(0); pointer-events: auto; }
+  .dd-flyout a { font-size: .875rem; color: var(--ink-soft); padding: .3rem 0; }
+  .dd-flyout a:hover { color: var(--gold-ink); }
+  .dd-flyout a.view-all {
+    font-weight: 700; color: var(--gold-ink); border-top: 1px solid var(--line);
+    margin-top: .25rem; padding-top: .55rem;
+  }
+  .view-all-link {
+    font-size: .875rem; font-weight: 700; color: var(--gold-ink);
+    padding: .6rem 0 0; margin-top: .35rem; border-top: 1px solid var(--line);
+  }
+
+  .nav-cta {
+    font-family: var(--display);
+    background: var(--gold);
+    color: var(--navy-dark);
+    border: none;
+    padding: .75em 1.35em;
+    font-size: .875rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .header-actions { display: flex; align-items: center; gap: 1rem; }
+  .burger {
+    display: none;
+    width: 40px; height: 40px;
+    border: 1.5px solid var(--line-on-navy);
+    align-items: center; justify-content: center;
+    flex-direction: column; gap: 4px;
+    flex-shrink: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+  .burger span { width: 18px; height: 1.5px; background: var(--white); display: block; }
+  #nav-check { display: none; }
+  .mobile-panel { display: none; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    background: radial-gradient(120% 160% at 85% -10%, oklch(0.32 0.07 235 / 1), var(--navy-dark) 55%);
+    color: var(--white);
+    overflow: hidden;
+    padding: clamp(4rem, 9vw, 7.5rem) 0 clamp(3.5rem, 7vw, 6rem);
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle, oklch(1 0 0 / 0.14) 1.5px, transparent 1.5px);
+    background-size: 26px 26px;
+    -webkit-mask-image: linear-gradient(120deg, black, transparent 65%);
+            mask-image: linear-gradient(120deg, black, transparent 65%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: clamp(2.2rem, 4.6vw, 3.6rem);
+    color: var(--white);
+  }
+  .hero h1 em { font-style: normal; color: var(--gold); }
+  .hero p.lead {
+    font-size: 1.14rem;
+    color: oklch(1 0 0 / 0.76);
+    max-width: 46ch;
+    margin-bottom: 2rem;
+  }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.3rem; }
+  .hero-stats { display: flex; gap: clamp(1.5rem, 4vw, 2.8rem); flex-wrap: wrap; }
+  .hero-stats div strong {
+    display: block;
+    font-family: var(--display);
+    font-size: 1.7rem;
+    color: var(--white);
+  }
+  .hero-stats div span { font-size: .82rem; color: oklch(1 0 0 / 0.6); }
+
+  .hero-card {
+    position: relative;
+    background: oklch(1 0 0 / 0.06);
+    border: 1px solid var(--line-on-navy);
+    padding: 1.8rem;
+    backdrop-filter: blur(6px);
+  }
+  .hero-card-title { font-family: var(--display); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.1rem; }
+  .hero-steps { display: flex; flex-direction: column; gap: .9rem; }
+  .hero-step { display: flex; gap: .85rem; align-items: flex-start; }
+  .hero-step .num {
+    flex: none;
+    width: 28px; height: 28px;
+    background: oklch(1 0 0 / 0.1);
+    color: var(--white);
+    font-family: var(--display);
+    font-size: .85rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .hero-step p { margin: 0; font-size: .89rem; color: oklch(1 0 0 / 0.82); }
+  .hero-step strong { display: block; color: var(--white); font-size: .93rem; margin-bottom: .1rem; }
+
+  /* trust strip: scrolling marquee (text placeholders — swap spans for <img> logos later) */
+  .trust-strip { background: var(--navy); border-top: 1px solid var(--line-on-navy); overflow: hidden; }
+  .trust-inner {
+    width: min(1180px, 100% - 2.5rem);
+    margin-inline: auto;
+    padding: 1.1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .trust-label {
+    font-size: .78rem; letter-spacing: .08em; text-transform: uppercase;
+    color: oklch(1 0 0 / 0.5); font-weight: 700; flex: none;
+    font-family: var(--display);
+  }
+  .trust-track-mask {
+    flex: 1;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+            mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  }
+  .trust-track {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    width: max-content;
+    animation: trust-scroll 28s linear infinite;
+  }
+  .trust-strip:hover .trust-track { animation-play-state: paused; }
+  .trust-track span {
+    font-family: var(--display);
+    font-size: .88rem;
+    font-weight: 700;
+    color: oklch(1 0 0 / 0.72);
+    letter-spacing: .02em;
+    white-space: nowrap;
+  }
+  @keyframes trust-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ---------- Services ---------- */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 1.4rem;
+  }
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    padding: 1.75rem;
+    transition: border-color .15s ease;
+  }
+  .service-card:hover { border-color: var(--gold); }
+  .service-icon {
+    width: 44px; height: 44px;
+    background: var(--navy);
+    color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.1rem;
+  }
+  .service-icon svg { width: 22px; height: 22px; }
+  .service-card h3 { font-size: 1.03rem; color: var(--ink); margin-bottom: .5rem; }
+  .service-card p { font-size: .91rem; color: var(--ink-soft); margin-bottom: 1.1rem; }
+
+  /* ---------- Testimonials ---------- */
+  .testimonials { background: var(--navy-dark); color: var(--white); }
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.4rem;
+  }
+  .testi-card {
+    background: oklch(1 0 0 / 0.04);
+    border: 1px solid var(--line-on-navy);
+    padding: 1.9rem;
+  }
+  .stars { display: flex; gap: .2rem; color: var(--gold); margin-bottom: 1rem; }
+  .stars svg { width: 16px; height: 16px; }
+  .testi-card p.quote { font-size: 1rem; color: oklch(1 0 0 / 0.88); margin-bottom: 1.4rem; }
+  .testi-person { display: flex; align-items: center; gap: .8rem; }
+  .testi-avatar {
+    width: 42px; height: 42px;
+    background: var(--gold);
+    color: var(--navy-dark);
+    font-family: var(--display);
+    font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    font-size: .95rem;
+    flex: none;
+  }
+  .testi-person strong { display: block; font-size: .92rem; color: var(--white); }
+  .testi-person span { font-size: .8rem; color: oklch(1 0 0 / 0.6); }
+
+  /* ---------- Process ---------- */
+  .process { background: var(--paper-alt); }
+  .process-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .process-item {
+    background: var(--paper-alt);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+  }
+  .process-num {
+    font-family: var(--display);
+    font-size: .85rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    color: var(--gold-ink);
+    text-transform: uppercase;
+  }
+  .process-item h3 { font-size: 1.05rem; color: var(--ink); margin-bottom: 0; }
+  .process-item p { color: var(--ink-soft); font-size: .89rem; margin-bottom: 0; }
+
+  /* ---------- Blog ---------- */
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.4rem;
+  }
+  .blog-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+  }
+  .blog-thumb {
+    height: 150px;
+    background: linear-gradient(135deg, var(--navy), oklch(0.4 0.1 230));
+    position: relative;
+  }
+  .blog-thumb::after {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle, oklch(1 0 0 / 0.16) 1.5px, transparent 1.5px);
+    background-size: 20px 20px;
+  }
+  .blog-card .body { padding: 1.5rem 1.5rem 1.7rem; flex: 1; display: flex; flex-direction: column; }
+  .blog-card h3 { font-size: 1.02rem; color: var(--ink); margin-bottom: .55rem; }
+  .blog-card p { font-size: .9rem; color: var(--ink-soft); margin-bottom: 1.2rem; flex: 1; }
+
+  /* ---------- FAQ ---------- */
+  .faq-list { max-width: 820px; margin-inline: auto; display: flex; flex-direction: column; gap: .8rem; }
+  details.faq {
+    background: var(--white);
+    border: 1px solid var(--line);
+    padding: 0;
+  }
+  details.faq summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-weight: 600;
+    font-size: .98rem;
+    color: var(--ink);
+  }
+  details.faq summary::-webkit-details-marker { display: none; }
+  details.faq summary .plus {
+    flex: none;
+    width: 26px; height: 26px;
+    border: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+  details.faq summary .plus::before, details.faq summary .plus::after {
+    content: "";
+    position: absolute;
+    background: var(--gold-ink);
+  }
+  details.faq summary .plus::before { width: 10px; height: 2px; }
+  details.faq summary .plus::after { width: 2px; height: 10px; transition: transform .15s ease; }
+  details.faq[open] summary .plus::after { transform: rotate(90deg); }
+  details.faq[open] summary .plus { border-color: var(--gold); }
+  .faq-body { padding: 0 1.4rem 1.3rem; color: var(--ink-soft); font-size: .93rem; max-width: 72ch; }
+
+  /* ---------- CTA / Contact ---------- */
+  .cta { background: var(--navy-dark); color: var(--white); }
+  .cta-inner {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  .cta h2 { color: var(--white); font-size: clamp(1.6rem, 3.4vw, 2.3rem); }
+  .cta p { color: oklch(1 0 0 / 0.72); font-size: 1.02rem; }
+  .cta-details { display: flex; flex-direction: column; gap: .9rem; margin-top: 1.6rem; }
+  .cta-details div { display: flex; gap: .8rem; align-items: flex-start; font-size: .92rem; color: oklch(1 0 0 / 0.85); }
+  .cta-details svg { width: 18px; height: 18px; flex: none; margin-top: .2rem; color: var(--gold); }
+
+  .proposal-card {
+    background: var(--white);
+    color: var(--ink);
+    border: 1px solid var(--line);
+    padding: 1.9rem;
+  }
+  .proposal-card h3 { font-size: 1.2rem; margin-bottom: 1.2rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
+  .field { display: flex; flex-direction: column; gap: .35rem; margin-bottom: .9rem; }
+  .field label { font-size: .8rem; font-weight: 600; color: var(--ink-soft); }
+  .field select, .field input, .field textarea {
+    font-family: var(--body);
+    font-size: .92rem;
+    padding: .75em .9em;
+    border-radius: 0;
+    border: 1.5px solid var(--line);
+    background: transparent;
+    color: var(--ink);
+  }
+  .field select:focus, .field input:focus, .field textarea:focus {
+    outline: 2px solid var(--gold);
+    outline-offset: 1px;
+  }
+  .field textarea { resize: vertical; min-height: 80px; font-family: var(--body); }
+  .proposal-card .btn { width: 100%; margin-top: .3rem; }
+  .form-note { font-size: .78rem; color: var(--ink-soft); margin-top: .8rem; text-align: center; }
+  #form-success {
+    display: none;
+    background: oklch(0.94 0.05 155);
+    color: oklch(0.32 0.09 155);
+    border-radius: 10px;
+    padding: .8em 1em;
+    font-size: .87rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  #form-success.show { display: block; }
+
+  /* ---------- Footer ---------- */
+  footer.site { background: var(--navy-dark); color: oklch(1 0 0 / 0.7); padding-top: 4rem; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.3fr repeat(4, 1fr);
+    gap: 2rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--line-on-navy);
+  }
+  .footer-brand .brand { margin-bottom: .9rem; }
+  .footer-brand p { font-size: .87rem; color: oklch(1 0 0 / 0.55); max-width: 30ch; }
+  .footer-col h4 {
+    font-family: var(--display);
+    font-size: .78rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 1.1rem;
+  }
+  .footer-col ul { display: flex; flex-direction: column; gap: .65rem; }
+  .footer-col a { font-size: .87rem; color: oklch(1 0 0 / 0.6); }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-cities { padding: 2rem 0; border-bottom: 1px solid var(--line-on-navy); }
+  .footer-cities h4 {
+    font-family: var(--display); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--white); margin-bottom: 1rem;
+  }
+  .city-list { display: flex; flex-wrap: wrap; gap: .6rem .9rem; }
+  .city-list a { font-size: .84rem; color: oklch(1 0 0 / 0.55); }
+  .city-list a:hover { color: var(--gold); }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.6rem 0 2rem;
+    font-size: .82rem;
+    color: oklch(1 0 0 / 0.45);
+  }
+  .footer-bottom .legal-links { display: flex; gap: 1.4rem; }
+  .footer-bottom .legal-links a { color: oklch(1 0 0 / 0.55); }
+  .footer-bottom .legal-links a:hover { color: var(--gold); }
+
+  /* ---------- Floating dock ---------- */
+  .dock {
+    position: fixed;
+    right: 1.1rem;
+    bottom: 1.1rem;
+    z-index: 70;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+  }
+  .dock a {
+    width: 46px; height: 46px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--navy-dark);
+    color: var(--white);
+    border: 1px solid var(--line-on-navy);
+    box-shadow: 0 10px 24px -10px oklch(0.2 0.05 255 / 0.5);
+  }
+  .dock a.wa { background: oklch(0.6 0.15 150); }
+  .dock a.call { background: var(--gold); color: var(--navy-dark); }
+  .dock a svg { width: 20px; height: 20px; }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .cta-inner { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: repeat(2, 1fr); }
+    .process-list { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 760px) {
+    .nav-bar { height: 68px; padding: 0 1.25rem; }
+    .nav-links { display: none; }
+    .burger { display: flex; }
+    #nav-check:checked ~ .mobile-panel { max-height: 640px; padding-top: .5rem; padding-bottom: 1rem; }
+    .mobile-panel {
+      display: block;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .25s ease;
+      background: var(--navy-dark);
+      border-top: 1px solid var(--line-on-navy);
+    }
+    .mobile-panel-inner { display: flex; flex-direction: column; gap: .2rem; width: min(1180px, 100% - 2.5rem); margin-inline: auto; }
+    .mobile-panel a.nav-plain, .mobile-panel a.nav-cta { padding: .75em .2em; font-size: .95rem; color: oklch(1 0 0 / 0.85); border-bottom: 1px solid var(--line-on-navy); display: block; }
+    .mobile-panel a.nav-cta { background: transparent; color: var(--gold); font-weight: 700; padding: .75em .2em; border-bottom: none; }
+    .mobile-panel details { border-bottom: 1px solid var(--line-on-navy); }
+    .mobile-panel summary {
+      list-style: none; cursor: pointer; padding: .75em .2em;
+      font-size: .95rem; color: oklch(1 0 0 / 0.85); font-weight: 600;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .mobile-panel summary::-webkit-details-marker { display: none; }
+    .mobile-panel details[open] summary { color: var(--white); }
+    .mobile-panel .sub-links { display: flex; flex-direction: column; gap: .1rem; padding: 0 0 .6em 1em; }
+    .mobile-panel .sub-links a { padding: .5em .2em; font-size: .875rem; color: oklch(1 0 0 / 0.65); border-bottom: none; }
+    .process-list { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 520px) {
+    .footer-top { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- Page header (Blog) ---------- */
+  .page-hero {
+    position: relative;
+    background: radial-gradient(120% 160% at 85% -10%, oklch(0.32 0.07 235 / 1), var(--navy-dark) 55%);
+    color: var(--white);
+    overflow: hidden;
+    padding: clamp(3.5rem, 7vw, 5.5rem) 0 clamp(3rem, 6vw, 4.5rem);
+    text-align: center;
+  }
+  .page-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, oklch(1 0 0 / 0.14) 1.5px, transparent 1.5px);
+    background-size: 26px 26px;
+    -webkit-mask-image: radial-gradient(circle at 50% 0%, black, transparent 70%);
+            mask-image: radial-gradient(circle at 50% 0%, black, transparent 70%);
+    pointer-events: none;
+  }
+  .page-hero .wrap { position: relative; max-width: 720px; }
+  .page-hero .eyebrow { justify-content: center; color: var(--gold); }
+  .page-hero .eyebrow::before { background: var(--gold); }
+  .page-hero h1 { font-size: clamp(2.1rem, 4.4vw, 3.4rem); color: var(--white); margin-bottom: .7rem; }
+  .page-hero p.lead { font-size: 1.08rem; color: oklch(1 0 0 / 0.76); max-width: 58ch; margin-inline: auto; margin-bottom: 0; }
+
+  /* ---------- Blog listing page grid ---------- */
+  .blog-listing { padding-top: clamp(3rem, 6vw, 4.5rem); }
+  .blog-listing .blog-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.6rem; }
+</style>
+</head>
+<body>
+
+
+<header class="site">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-bar">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">HiringGo</span>
+    </a>
+
+    <div class="nav-links">
+
+      <div class="dd-trigger">
+        <span class="dd-label">Services
+          <svg class="dd-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </span>
+        <div class="dd-panel">
+          <span class="dd-eyebrow">Services</span>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="Recruitment.html">Recruitment Services
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout">
+              <a href="Recruitment.html">Recruitment Services</a>
+              <a href="services.html#services">Recruitment Consultants</a>
+            </div>
+          </div>
+
+          <div class="dd-sub">
+            <a class="dd-item featured" href="StaffingServices.dc.html">Staffing Services
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout" style="min-width:250px">
+              <a href="services.html#services">Permanent IT Staffing Services</a>
+              <a href="services.html#services">Temporary IT Staffing Services</a>
+              <a href="services.html#services">IT Staffing Services</a>
+            </div>
+          </div>
+
+          <a class="dd-item" href="services.html#services">Outsourcing Services</a>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="services.html#services">Third Party Payroll
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout">
+              <a href="services.html#services">Payroll Outsourcing Services</a>
+              <a href="services.html#services">Payroll Solutions Company</a>
+              <a href="services.html#services">Payroll for Small Business</a>
+            </div>
+          </div>
+
+          <a class="dd-item" href="services.html#services">HR &amp; Recruitment Process Outsourcing</a>
+          <a class="dd-item" href="services.html#services">HR Solutions</a>
+          <a class="view-all-link" href="services.html#services">View all services &rarr;</a>
+        </div>
+      </div>
+
+      <div class="dd-trigger">
+        <span class="dd-label">Locations
+          <svg class="dd-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </span>
+        <div class="dd-panel" style="width:220px">
+          <span class="dd-eyebrow">Locations</span>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="services.html#locations">Delhi
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout" style="min-width:250px">
+              <a href="services.html#locations">IT Recruitment Agency in Delhi</a>
+              <a href="services.html#locations">IT Staffing Services in Delhi</a>
+              <a class="view-all" href="services.html#locations">View all services in Delhi &rarr;</a>
+            </div>
+          </div>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="services.html#locations">Gurgaon
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout" style="min-width:250px">
+              <a href="services.html#locations">IT Recruitment Agency in Gurgaon</a>
+              <a href="services.html#locations">IT Staffing Services in Gurgaon</a>
+              <a class="view-all" href="services.html#locations">View all services in Gurgaon &rarr;</a>
+            </div>
+          </div>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="services.html#locations">Noida
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout" style="min-width:250px">
+              <a href="services.html#locations">IT Recruitment Agency in Noida</a>
+              <a href="services.html#locations">IT Staffing Services in Noida</a>
+              <a class="view-all" href="services.html#locations">View all services in Noida &rarr;</a>
+            </div>
+          </div>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="services.html#locations">Mumbai
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout" style="min-width:250px">
+              <a href="services.html#locations">IT Recruitment Agency in Mumbai</a>
+              <a href="services.html#locations">IT Staffing Services in Mumbai</a>
+              <a class="view-all" href="services.html#locations">View all services in Mumbai &rarr;</a>
+            </div>
+          </div>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="bangalore.html">Bangalore
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout" style="min-width:250px">
+              <a href="bangalore.html">IT Recruitment Agency in Bangalore</a>
+              <a href="bangalore.html">IT Staffing Services in Bangalore</a>
+              <a class="view-all" href="bangalore.html">View all services in Bangalore &rarr;</a>
+            </div>
+          </div>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="services.html#locations">Pune
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout" style="min-width:250px">
+              <a href="services.html#locations">IT Recruitment Agency in Pune</a>
+              <a href="services.html#locations">IT Staffing Services in Pune</a>
+              <a class="view-all" href="services.html#locations">View all services in Pune &rarr;</a>
+            </div>
+          </div>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="services.html#locations">Hyderabad
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout" style="min-width:250px">
+              <a href="services.html#locations">IT Recruitment Agency in Hyderabad</a>
+              <a href="services.html#locations">IT Staffing Services in Hyderabad</a>
+              <a class="view-all" href="services.html#locations">View all services in Hyderabad &rarr;</a>
+            </div>
+          </div>
+
+          <a class="view-all-link" href="services.html#locations">All India Locations &rarr;</a>
+        </div>
+      </div>
+
+      <a class="nav-plain" href="#top">Blog</a>
+      <a class="nav-plain" href="services.html#contact">Job Seeker</a>
+      <a class="nav-plain" href="services.html#contact">Contact</a>
+    </div>
+
+    <div class="header-actions">
+      <a href="services.html#contact" class="nav-cta">GET IN TOUCH</a>
+      <label for="nav-check" class="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </label>
+    </div>
+  </div>
+
+  <div class="mobile-panel">
+    <div class="mobile-panel-inner">
+      <details>
+        <summary>Services</summary>
+        <div class="sub-links">
+          <a href="Recruitment.html">Recruitment Services</a>
+          <a href="services.html#services">Recruitment Consultants</a>
+          <a href="StaffingServices.dc.html">Staffing Services</a>
+          <a href="services.html#services">Outsourcing Services</a>
+          <a href="services.html#services">Third Party Payroll</a>
+          <a href="services.html#services">HR &amp; RPO</a>
+          <a href="services.html#services">HR Solutions</a>
+        </div>
+      </details>
+      <details>
+        <summary>Locations</summary>
+        <div class="sub-links">
+          <a href="services.html#locations">Delhi</a>
+          <a href="services.html#locations">Gurgaon</a>
+          <a href="services.html#locations">Noida</a>
+          <a href="services.html#locations">Mumbai</a>
+          <a href="bangalore.html">Bangalore</a>
+          <a href="services.html#locations">Pune</a>
+          <a href="services.html#locations">Hyderabad</a>
+        </div>
+      </details>
+      <a class="nav-plain" href="#top">Blog</a>
+      <a class="nav-plain" href="services.html#contact">Job Seeker</a>
+      <a class="nav-plain" href="services.html#contact">Contact</a>
+      <a class="nav-cta" href="services.html#contact">GET IN TOUCH</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- PAGE HEADER -->
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="eyebrow">Resources</div>
+      <h1>Our Blog</h1>
+      <p class="lead">As a leader in the field of staffing solutions, we are dedicated to helping businesses like yours succeed by providing access to a pool of high-quality candidates. Follow our blog for the latest industry updates, recruitment tips, advice on maximizing the effectiveness of your workforce, and more.</p>
+    </div>
+  </section>
+
+  <!-- BLOG GRID -->
+  <section class="blog-listing">
+    <div class="wrap">
+      <div class="blog-grid">
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How Staffing Services Reduce Hiring Costs and Improve Productivity</h3>
+            <p>Discover how staffing services lower recruitment costs, speed up hiring, improve workforce flexibility, and help internal teams stay productive every day.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Compliance Checklist for Payroll Outsourcing in India</h3>
+            <p>Use this payroll outsourcing compliance checklist to review employee data, PF, ESI, TDS, statutory deadlines, records, audits, and data security in India.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Future-Proof Your Business with Integrated Recruitment and HR Services</h3>
+            <p>Learn how integrated recruitment and HR services connect hiring, staffing, payroll, and talent management to support sustainable business growth and resilience.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Technical Screening Methods for Hiring the Right IT Professionals</h3>
+            <p>Explore technical screening methods including IT skills tests, coding assessments, developer screening, and interviews to hire capable IT professionals.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How to Write Job Descriptions That Attract Qualified Tech Candidates</h3>
+            <p>Learn how to write clear IT job descriptions that attract qualified tech candidates through honest titles, realistic requirements, and role details for success.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Skill-Based Hiring: Why Companies Are Moving Beyond College Degrees</h3>
+            <p>Learn why companies are adopting skills-first hiring, competency-based recruitment, and candidate assessments instead of relying only on college degrees.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How to Create an Effective IT Recruitment Strategy for Your Business</h3>
+            <p>Learn how to build an effective IT recruitment strategy using workforce planning, clear job descriptions, talent acquisition, and better hiring practices.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How to Reduce Candidate Drop-Off During the Hiring Process</h3>
+            <p>Learn how to reduce candidate drop-off by simplifying applications, improving communication, speeding up decisions, and strengthening candidate engagement.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How Predictive Analytics Can Improve Recruitment Decisions</h3>
+            <p>Learn how predictive analytics uses recruitment data, hiring performance analysis, and talent insights to support faster and better hiring decisions today.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Recruitment Automation: Tools That Make Hiring Easier and Faster</h3>
+            <p>Explore recruitment automation tools that streamline applications, screening, scheduling, candidate communication, and hiring process management with ease.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Interview Scorecards: A Smarter Way to Evaluate Candidates</h3>
+            <p>Learn how interview scorecards create fair hiring criteria, improve candidate comparison, reduce bias, and support clearer recruitment decisions for teams.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How Structured Interviews Improve Hiring Decisions</h3>
+            <p>Learn how structured interviews, consistent questions, and fair evaluation criteria reduce bias and help companies make stronger hiring decisions consistently.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How Salary Benchmarking Helps Companies Attract Top Talent</h3>
+            <p>Learn how salary benchmarking and market pay analysis help companies offer competitive compensation, reduce offer rejections, and attract top talent fairly.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>What Is Talent Mapping and How Does It Support Strategic Hiring?</h3>
+            <p>Learn how talent mapping, market research, and talent intelligence help businesses plan future hiring needs and build stronger recruitment pipelines earlier.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>The Role of Recruitment Consultants in Building High-Performing Teams</h3>
+            <p>Learn how recruitment consultants improve talent acquisition, candidate screening, workforce planning, and executive hiring to build high-performing teams.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>What Candidates Expect from Recruitment Agencies Today</h3>
+            <p>Learn what candidates expect from recruitment agencies, including clear communication, faster hiring, honest information, personal attention, and better candidate experience.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How HR Services Improve Employee Satisfaction and Retention</h3>
+            <p>Discover how professional HR services improve employee satisfaction, strengthen workplace culture, reduce turnover, and support long-term business success.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Recruitment Trends Every HR Leader Should Watch in 2026</h3>
+            <p>Explore the latest recruitment trends for 2026 that every HR leader should know to attract skilled talent, improve hiring, and build future-ready teams.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How AI Is Changing Recruitment Services Without Replacing Recruiters</h3>
+            <p>Discover how AI is transforming recruitment services by improving speed, accuracy, and candidate matching while empowering recruiters, not replacing them.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Essential HR Services Every Growing Business Needs test</h3>
+            <p>Explore essential HR services including recruitment, employee management, payroll, compliance, onboarding, and HR consulting for growing businesses.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Common Payroll Mistakes Small Businesses Must Avoid</h3>
+            <p>Avoid costly errors with our guide to common payroll mistakes small businesses must avoid. Learn how to ensure accurate, compliant, and timely payroll.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>HR Services Company: How to Choose the Right HR Partner</h3>
+            <p>Choose the right HR Services Company for expert recruitment, payroll, compliance, and workforce solutions that support business growth and improve HR efficiency.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Essential HR Services Every Growing Business Needs</h3>
+            <p>Essential HR Services Every Growing Business Needs to streamline hiring, payroll, employee management, compliance, and workforce operations for sustainable business growth.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Why Payroll for Small Businesses Should Be Automated</h3>
+            <p>Discover why small businesses should automate payroll to save time, reduce errors, improve compliance, and simplify employee payments efficiently.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Top Payroll Challenges Businesses Can Solve Through Outsourcing</h3>
+            <p>Discover top payroll challenges businesses face and how outsourcing can improve accuracy, ensure compliance, reduce costs, save time, and simplify payroll.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Payroll Outsourcing vs In-House Payroll: Which Saves More Money?</h3>
+            <p>Compare payroll outsourcing vs in-house payroll costs and discover which option can save your business more money while improving accuracy and efficiency.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Payroll Outsourcing Services: A Smart Move for Growing Businesses</h3>
+            <p>Discover how Payroll Outsourcing Services can simplify payroll management, reduce costs, ensure compliance, and help growing businesses focus on core operations.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Why Headhunting Services Are Essential for Niche Hiring</h3>
+            <p>Discover why headhunting services are essential for niche hiring, helping businesses find specialized talent, access passive candidates, and fill critical roles faster.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>When Should a Company Choose Executive Search Services?</h3>
+            <p>Know when a company should choose Executive Search Services to find top-level leaders, access skilled talent, and make strategic hiring decisions.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Executive Search vs Traditional Recruitment: Key Differences</h3>
+            <p>Executive Search vs Traditional Recruitment: discover key differences, benefits, and which hiring approach best fits your business needs.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How Headhunting Services Help You Hire Passive Candidates</h3>
+            <p>Discover how headhunting services help you hire passive candidates, access top talent, and find skilled professionals who aren't actively seeking new jobs.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Executive Search Services: Finding Leaders Who Drive Business Growth</h3>
+            <p>Executive Search Services: Find exceptional leaders who drive business growth with strategic executive search, industry expertise, and tailored recruitment solutions.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>The Hidden Benefits of Partnering with a Staffing Agency</h3>
+            <p>Discover the hidden benefits of partnering with a staffing agency, from faster hiring and reduced costs to better talent access and workforce flexibility.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Third-Party Payroll: Everything Employers Need to Know</h3>
+            <p>Learn everything employers need to know about third-party payroll, including benefits, compliance, payroll processing, costs, and how it works.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How Third-Party Payroll Simplifies Employee Management</h3>
+            <p>Discover how third-party payroll simplifies employee management by streamlining salary processing, compliance, reporting, and payroll administration.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How Staffing Services Help Businesses Scale Quickly</h3>
+            <p>Discover how staffing services help businesses scale quickly by providing skilled talent, reducing hiring time, and supporting flexible workforce needs.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Temporary Staffing vs Permanent Staffing: Which One Fits Your Business?</h3>
+            <p>Compare temporary and permanent staffing to find the right hiring model for your business based on flexibility, cost, workforce needs, and growth goals.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Recruitment Consultants vs In-House Recruiters: Which Is Right for You?</h3>
+            <p>Compare recruitment consultants vs in-house recruiters to find the best hiring approach for your business based on cost, speed, expertise, and hiring needs.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>The Complete Recruitment Process: From Job Posting to Onboarding</h3>
+            <p>Explore the complete recruitment process from job posting to onboarding. Learn how businesses hire top talent efficiently with a structured recruitment process.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How Recruitment Consultants Match the Right Talent with the Right Company</h3>
+            <p>Learn how recruitment consultants match the right talent with the right company using expert screening, sourcing, and hiring strategies.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How Recruitment Services Help Companies Hire Better Talent Faster</h3>
+            <p>Discover how recruitment services help companies hire better talent faster, reduce time-to-hire, improve candidate quality, and streamline recruitment.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>10 Signs Your Business Needs Professional Recruitment Services</h3>
+            <p>Discover 10 signs your business needs professional recruitment services to hire top talent faster, reduce hiring costs, and improve recruitment efficiency.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Emerging IT Roles Companies Should Hire for in 2026</h3>
+            <p>Discover the emerging IT roles companies should hire for in 2026, from AI engineers to cybersecurity experts, to build future-ready, high-performing teams.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Why Employer Branding Matters in IT Recruitment</h3>
+            <p>Learn why employer branding matters in IT recruitment. Attract top tech talent, improve candidate experience, reduce hiring costs, and build a stronger workforce.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Best Strategies for Hiring Remote IT Professionals</h3>
+            <p>Discover the best strategies for hiring remote IT professionals, from sourcing top tech talent to screening, onboarding, and building high-performing remote teams.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How IT Recruitment Agencies Help Fill Niche Tech Roles</h3>
+            <p>Learn how IT recruitment agencies help fill niche tech roles by sourcing specialized talent, reducing hiring time, and connecting businesses with skilled professionals.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How to Choose the Right Recruitment Process Outsourcing Provider</h3>
+            <p>Learn how to choose the right Recruitment Process Outsourcing (RPO) provider to improve hiring efficiency, reduce costs, and attract top talent.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How to Attract Top IT Talent in a Competitive Market</h3>
+            <p>Learn how to attract top IT talent in a competitive market with proven recruitment strategies, employer branding, and faster hiring practices.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How RPO Helps Build a Scalable Recruitment Strategy</h3>
+            <p>Learn how Recruitment Process Outsourcing (RPO) helps businesses build a scalable recruitment strategy, improve hiring efficiency, and attract top talent.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>The Role of RPO in High-Volume Hiring Campaigns</h3>
+            <p>Discover how Recruitment Process Outsourcing (RPO) helps businesses manage high-volume hiring campaigns with faster recruitment, better quality hires, and lower costs.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How Recruitment Process Outsourcing Improves Hiring Efficiency</h3>
+            <p>Discover how Recruitment Process Outsourcing (RPO) improves hiring efficiency by reducing time-to-hire, lowering costs, and helping businesses hire top talent faster.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Key Signs Your Business Needs an RPO Partner</h3>
+            <p>Discover the key signs your business needs an RPO partner to improve hiring efficiency, reduce recruitment costs, and attract top talent faster.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>End-to-End Hiring Process: From Talent Sourcing to Employee Onboarding</h3>
+            <p>Optimize your recruitment with an End-to-End Hiring Process: From Talent Sourcing to Employee Onboarding for faster hiring, better talent, and seamless onboarding.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How to Build a Strong Talent Pipeline for Future Hiring Needs</h3>
+            <p>Build a strong talent pipeline for future hiring needs by attracting, engaging, and nurturing top candidates to ensure faster, smarter recruitment success.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Recruitment Metrics Every HR Manager Should Track</h3>
+            <p>Track the most important Recruitment Metrics Every HR Manager Should Track to improve hiring efficiency, reduce costs, and make smarter recruitment decisions.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Why Candidate Experience Matters More Than Ever in Modern Recruitment</h3>
+            <p>Learn why candidate experience is essential in modern recruitment and how it improves employer branding, attracts top talent, and boosts hiring success.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Temporary Staffing vs Permanent Staffing: Key Differences Explained</h3>
+            <p>Learn the key differences between temporary staffing vs permanent staffing, including benefits, costs, flexibility, and when to choose each hiring model.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How Staffing Services Help Businesses Scale Faster</h3>
+            <p>Learn how Staffing Services Help Businesses Scale Faster by reducing hiring time, accessing top talent, and building flexible teams for sustainable growth.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Top Benefits of Partnering with a Staffing Agency</h3>
+            <p>Discover the top benefits of partnering with a staffing agency to hire qualified talent faster, reduce recruitment costs, and improve workforce flexibility.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>8 Hiring Mistakes Companies Make and How Staffing Agencies Prevent Them</h3>
+            <p>Discover 8 common hiring mistakes companies make and how staffing agencies help avoid them to improve hiring quality, speed, and business growth.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How AI is Transforming IT Recruitment in 2026</h3>
+            <p>Learn how AI is transforming IT recruitment in 2026 with smarter hiring, automated screening, predictive analytics, and faster talent acquisition.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>10 IT Recruiter Skills Every Recruiter Should Have</h3>
+            <p>Discover the 10 IT Recruiter Skills Every Recruiter Should Have to attract top talent, improve hiring success, and build a strong recruitment strategy.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How to Hire Software Developers Faster Without Compromising Quality</h3>
+            <p>Hire software developers faster without compromising quality. Learn proven hiring strategies, screening tips, and best practices to build top tech teams.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Contract vs Permanent IT Hiring: Which One Fits Your Business</h3>
+            <p>Get Azure Data Lake managed services in Delhi with Goognu. Build secure, scalable, and high-performance cloud data solutions with expert support.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>What Are Staffing Services and Why Do Businesses Need Them?</h3>
+            <p>Learn what staffing services are, how they work, and why businesses use them to hire skilled talent faster, reduce costs, and improve workforce flexibility.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Common Challenges in IT Recruitment and How to Overcome Them</h3>
+            <p>Common Challenges in IT Recruitment and How to Overcome Them with proven strategies to attract top talent, reduce hiring delays, and improve recruitment success.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Complete Guide to IT Recruitment: Finding the Right Tech Talent</h3>
+            <p>Get Azure Data Lake managed services in Noida with Goognu. Build secure, scalable, and high-performance cloud data solutions with expert support.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How RPO Helps Businesses Reduce Hiring Costs and Cost-per-Hire</h3>
+            <p>Discover how Recruitment Process Outsourcing (RPO) helps businesses reduce hiring costs, lower cost-per-hire, and improve recruitment efficiency.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>What is Recruitment Process Outsourcing (RPO) and How Does It Work?</h3>
+            <p>Recruitment Process Outsourcing (RPO) helps businesses streamline hiring, reduce recruitment costs, and secure top talent with scalable hiring solutions.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>RPO vs Traditional Recruitment: Which Hiring Model is Better?</h3>
+            <p>RPO vs Traditional Recruitment: Which Hiring Model is Better? Compare costs, scalability, speed, and quality to choose the best hiring solution for your business.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>When Should Your Company Invest in Recruitment Process Outsourcing?</h3>
+            <p>Discover when your company should invest in Recruitment Process Outsourcing to reduce hiring costs, improve talent acquisition, and scale recruitment efficiently.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Benefits of Partnering with a Recruitment Agency for Tech Hiring</h3>
+            <p>Discover the Benefits of Partnering with a Recruitment Agency for Tech Hiring to find skilled IT talent faster, reduce hiring costs, and streamline recruitment.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Executive Search vs Recruitment: The Right Hiring Approach for Your Business</h3>
+            <p>Compare executive search vs recruitment to find the right hiring approach for your business. Learn when each strategy delivers the best talent.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>When Should You Hire a CTO?</h3>
+            <p>Learn when to hire a CTO and discover the key signs your business needs technical leadership to drive innovation, growth, and scalability.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How to Hire a CTO for Startup</h3>
+            <p>Discover how candidate experience influences offer acceptance rates and learn strategies to improve hiring outcomes and attract top talent.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How Candidate Experience Impacts Offer Acceptance Rates</h3>
+            <p>Discover how candidate experience influences offer acceptance rates and learn strategies to improve hiring outcomes and attract top talent.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Why Partnering with a Recruitment Agency Can Accelerate Business Growth</h3>
+            <p>Get Azure Data Lake consulting services in Hyderabad with Goognu. Build secure, scalable, and high-performance cloud data solutions.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How Workforce Agility Impacts Business Valuation and Growth</h3>
+            <p>Discover how workforce agility drives business growth, improves adaptability, boosts productivity, and increases long-term business valuation.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Payroll, Compliance, and Contractor Risk in Distributed Teams</h3>
+            <p>Explore time-to-hire vs quality-of-hire in tech recruitment with HiringGo. Learn how to balance hiring speed and candidate quality effectively.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Time-to-Hire vs Quality-of-Hire: What Should Companies Prioritize?</h3>
+            <p>Explore time-to-hire vs quality-of-hire in tech recruitment with HiringGo. Learn how to balance hiring speed and candidate quality effectively.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How Recruitment Agencies Build Strong Talent Pipelines for IT Companies</h3>
+            <p>Get AWS data warehouse managed services in Bengaluru with Goognu. Ensure secure, scalable, and high-performance data solutions with expert support.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How IT Recruitment Services Reduce Time to Hire for Tech Roles</h3>
+            <p>Discover how IT recruitment services reduce time to hire for tech roles with faster sourcing, expert screening, and efficient hiring strategies.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Benefits of Partnering with a Recruitment Agency for Tech Hiring</h3>
+            <p>Discover the benefits of partnering with a recruitment agency for tech hiring. Save time, access top talent, and streamline your hiring process.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Top Challenges in IT Recruitment and How to Overcome Them</h3>
+            <p>Discover the top challenges in IT recruitment and how to overcome them. Learn strategies to attract, hire, and retain top tech talent effectively.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Why Traditional Hiring Methods Fail in IT Recruitment</h3>
+            <p>Discover why traditional hiring methods fail in IT recruitment and how modern strategies help attract, assess, and hire top tech talent faster.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>The Benefits of Partnering with an IT Recruitment Agency</h3>
+            <p>Discover how partnering with an IT recruitment agency helps businesses save time, access top tech talent, and streamline hiring for long-term success.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>IT Recruitment Mistakes That Could Cost You the Best Candidates</h3>
+            <p>Avoid common IT recruitment mistakes that may cost you top candidates. Learn how to improve your hiring process and secure the best tech talent.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How Remote Work Has Changed IT Recruitment</h3>
+            <p>Discover how remote work has transformed IT recruitment. Learn about new hiring trends, challenges, and strategies to attract top remote tech talent.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Future Skills in IT Recruitment: What to Look for in Candidates</h3>
+            <p>Explore the future skills that matter in IT recruitment. Learn what hiring managers should seek in candidates to build strong, future-ready tech teams.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>The Ultimate IT Recruitment Checklist for Hiring Managers</h3>
+            <p>Streamline your hiring with our ultimate IT recruitment checklist for hiring managers. Discover key steps, best practices, and tips to recruit top tech talent.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>The Role of AI in IT Recruitment: Smarter Hiring for Tech Roles</h3>
+            <p>Explore how AI is transforming IT recruitment with smarter tools, better candidate matching, and faster hiring for tech roles. Stay ahead with AI-driven hiring.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>IT Recruitment vs. General Recruitment: What's the Difference?</h3>
+            <p>Discover the key differences between IT recruitment and general recruitment. Learn how specialized hiring strategies shape the tech talent landscape in 2025.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Top 7 Challenges Companies Face in IT Recruitment — And How to Overcome Them</h3>
+            <p>Discover the top 7 challenges companies face in IT recruitment and learn proven strategies to overcome them. Stay ahead in hiring with smart solutions.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How IT Recruitment is Evolving in 2025: Trends You Need to Know</h3>
+            <p>Hire expert GCP engineers in Mumbai to design, deploy, and optimize Google Cloud solutions. Get reliable cloud consulting, migration, and support services.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Permanent staffing VS Contract staffing: making the right decision</h3>
+            <p>Explore the pros and cons of permanent vs. contract staffing to make informed decisions and optimize your workforce strategy. Learn More.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Contract staffing services which makes Hiringgo an industry leader</h3>
+            <p>Elevate your hiring with HiringGo's top-tier contract staffing services, setting industry standards for excellence and efficiency. Learn More</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Exploring three different types of Recruitment process</h3>
+            <p>Discover the perfect RPO model for your business! Explore three diverse recruitment process outsourcing approaches in our latest blog. Learn More!</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Revolutionize your hiring process: Five Innovative Recruiting Strategies in 2024</h3>
+            <p>Discover game-changing recruiting tactics for 2024! Learn five innovative strategies to revolutionize your hiring process and attract top talent. Dive in now!</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Top six things to consider while working with staffing Agency</h3>
+            <p>Discover the top 6 crucial factors for navigating the world of staffing agencies effectively. Maximize your success with expert insights!</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Why use a recruitment agency? The top 5 reasons</h3>
+            <p>Unlock the advantages of recruitment agencies! Learn the top 5 reasons why they're essential for finding your dream job. Read now!</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>The biggest IT staffing challenges Indian companies are facing right now</h3>
+            <p>Discover key IT staffing challenges in India. Explore solutions for talent acquisition and retention in the dynamic tech industry.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Temporary staffing Is it the right option for your company</h3>
+            <p>Discover if temporary staffing fits your company's needs with HiringGo's expert insights. Explore benefits and considerations. Read now!</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>The temporary advantage How IT staffing services meet evolving business needs</h3>
+            <p>Explore how IT staffing adapts to evolving business demands, providing a temporary advantage in a dynamic market. Discover more at HiringGo.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Why your company should hire contract staff?</h3>
+            <p>Discover the benefits of hiring contract staff for your company. Explore flexibility, expertise, and cost-effectiveness. Unlock success with contract staffing.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>From cost savings to competitive advantage: Unleashing the power of IT outsourcing</h3>
+            <p>Unlock cost savings and gain competitive edge through IT outsourcing. Explore how HiringGo empowers businesses to leverage outsourcing effectively.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Building Tomorrow's Team The Role of IT Staffing Services</h3>
+            <p>Discover how IT staffing services shape tomorrow's teams. Explore the pivotal role they play in sourcing, recruiting, and nurturing talent.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Building Your dream team: Leveraging Contract IT staffing for success</h3>
+            <p>Elevate your team with contract IT staffing. Learn how to harness flexible talent solutions for your business success. Dive into our guide now!</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>What are the recruitment challenges faced by recruiters?</h3>
+            <p>Discover the top recruitment challenges confronting recruiters today. Explore solutions to talent sourcing, retention, and skill gaps. Read more!</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How permanent IT staffing services transform business</h3>
+            <p>Discover the game-changing impact of permanent IT staffing services on your business. Unlock efficiency, expertise, and growth potential. Learn more!</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>The Benefits of Working with a Technical Recruiting Agency</h3>
+            <p>Discover the advantages of partnering with a technical recruiting agency. From accessing top talent to saving time, find your ideal candidates effortlessly.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How to create an effective job description for a technical position</h3>
+            <p>Discover essential strategies for crafting an impactful job description tailored to technical roles. Elevate your hiring process with expert insights.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Choosing the right outsourcing partner for your business</h3>
+            <p>Find your ideal outsourcing partner with expert guidance. Discover essential criteria for selecting the right fit for your business needs.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Top six things to consider while working with an IT staffing agency</h3>
+            <p>Discover the essential factors for success when partnering with an IT staffing agency. Streamline your hiring process and elevate your team.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>The Evolution of Corporate Training and Outsourcing Services in the Digital Age</h3>
+            <p>Unlock the future of corporate training and outsourcing in the digital era with HiringGo. Elevate your workforce with innovative solutions.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>The Benefits of Outsourcing Payroll Efficiency, Compliance, and Cost Savings</h3>
+            <p>Discover the benefits of outsourcing payroll increased efficiency, compliance and cost savings. Streamline operations and boost business performance. learn more</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Some Benefits of Outsourcing Staffing Services</h3>
+            <p>Discover the advantages of outsourcing staffing services and how it can benefit your organization. Don't miss out on the cost savings and efficiency gains that come with outsourcing.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How collaboration with HiringGo can help you improve your employee experience</h3>
+            <p>Discover how collaborating with HiringGo can help you enhance your employee experience and streamline your talent acquisition process.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Staffing Strategies for the Modern Workplace A HiringGo Perspective</h3>
+            <p>Discover the most effective staffing strategies for the modern workplace. Learn from HiringGo, a leading agency in manpower and outsourcing, on how to attract and retain top talent in today's dynamic workforce.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Step Up Your Hiring Process Discover HiringGo's Leading-Edge Staffing Solutions</h3>
+            <p>Discover how to step up your hiring process with HiringGo's innovative staffing solutions. Transform your recruitment process, optimize efficiency, and drive business growth.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Why HiringGo is Your Optimal Solution for Outsourcing Needs</h3>
+            <p>Discover why HiringGo is your ultimate solution for all your outsourcing needs. Let us help you streamline your business processes today.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>The Power of Recruitment Consultants in Building Dream Teams</h3>
+            <p>Discover how HiringGo can empower your recruitment process with our expert consultants, helping you build your dream team efficiently and effectively.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Workplace Diversity and Inclusion</h3>
+            <p>Elevate your workforce with HiringGo! Unleash the power of workplace diversity and inclusion for a dynamic, innovative, and inclusive organizational culture.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>The Power of Cultural Fit: Why It Matters in Successful Staffing Solutions</h3>
+            <p>Unlock success with cultural fit in staffing. Explore why it's crucial for seamless collaboration and enhanced productivity. Elevate your team.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Things a Recruiter Needs to Know About Job Posting Sites</h3>
+            <p>Enhance your hiring process with HiringGo. Learn everything a recruiter needs to know about job posting sites to attract top talent.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How To Find a Best Employee For Your Company?</h3>
+            <p>Struggling with hiring? Our HiringGo guide offers strategies on how to find the best employee for your company, ensuring a perfect fit every time.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How To Select a Right Recruitment Agency For Your Company?</h3>
+            <p>Navigate your hiring process with HiringGo's comprehensive guide on how to select the right recruitment agency for your company.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Advantages Of Employing Recruitment Consultants For Your Company</h3>
+            <p>Discover the advantages of employing recruitment consultants through HiringGo. Enhance your company's hiring process and secure top talent.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>The Benefits of Outsourcing HR Services for Your Business</h3>
+            <p>Discover the advantages of outsourcing HR services for your business. Streamline operations, enhance expertise, and focus on growth. Learn more now!</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Difference Between Company Payroll and Third-party Payroll</h3>
+            <p>Learn about the key distinctions between company payroll and third-party payroll management to make informed decisions for your business.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>The Importance of Soft Skills in Technical Recruitment</h3>
+            <p>Discover the significance of soft skills in technical recruitment and how they can impact the success of your hiring process.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Build a salary structure that minimizes potential liability</h3>
+            <p>Create a salary structure that reduces risk and ensures compliance. Our expert team will help you build a solid framework to minimize potential liability.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Advantages of Payroll Outsourcing</h3>
+            <p>Discover the benefits of payroll outsourcing and how it can help your business save time and money while ensuring compliance with tax laws and regulations.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Outsourcing vs Managed services: Advantages and Disadvantages</h3>
+            <p>Discover the pros and cons of Outsourcing vs Managed Services. Make informed decisions for your business. Find out more now!</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Create an effective job description for a technical position</h3>
+            <p>Craft compelling job descriptions for technical roles to attract top talent. Learn key tips and best practices to create effective descriptions.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Improving Your Team's Productivity with Corporate Training</h3>
+            <p>Elevate your team productivity with targeted corporate training. Equip your workforce with essential skills and unleash their full potential. Boost results now!</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Maximizing Your ROI with Corporate Training</h3>
+            <p>The optimization of your return on investment can be achieved through the implementation of corporate training.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Outsourcing vs In-house: Which is the Best Fit for Your Business?</h3>
+            <p>Determining the suitable option for your business between outsourcing and in-house operations is crucial.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>How to Find the Right Talent for a Technical Role - Expert Tips &amp; Tricks</h3>
+            <p>Discovering suitable talent for a technical position can be challenging. we have compiled a list of professional tips and tricks to aid you in your search.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Top Tools &amp; Platforms for Finding Top Tech Talent</h3>
+            <p>The best talent in the tech industry? Check out our comprehensive guide to the tools and platforms that can help you find the perfect candidates for your jobs.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>What are best practices for effective technical recruitment</h3>
+            <p>Discover the specialized skills and expertise required for effective technical recruitment and learn how to attract and hire the best tech professionals for you</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-thumb"></div>
+          <div class="body">
+            <h3>Benefits of Outsourcing Your Technical Recruitment</h3>
+            <p>Outsourcing your technical recruitment process can help you find the right people for your team, allowing you to focus on growing your business.</p>
+            <a href="services.html#contact" class="btn-ghost-link">READ MORE <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site" id="locations">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark"></span>
+          <span class="brand-name">HiringGo</span>
+        </a>
+        <p>Reliable, efficient workforce solutions &mdash; manpower supply, IT staffing, and HR process management for growing businesses.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Hire Developers</h4>
+        <ul>
+          <li><a href="services.html#services">Full Stack Developer</a></li>
+          <li><a href="services.html#services">Java Developer</a></li>
+          <li><a href="services.html#services">Python Developer</a></li>
+          <li><a href="services.html#services">React Developer</a></li>
+          <li><a href="services.html#services">DevOps Engineer</a></li>
+          <li><a href="services.html#services">Data Scientist</a></li>
+          <li><a href="services.html#services">View all roles &rarr;</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Job Descriptions</h4>
+        <ul>
+          <li><a href="job-description.html">Software Engineer JD</a></li>
+          <li><a href="job-description.html">QA Engineer JD</a></li>
+          <li><a href="job-description.html">Product Manager JD</a></li>
+          <li><a href="job-description.html">UI/UX Designer JD</a></li>
+          <li><a href="job-description.html">HR Manager JD</a></li>
+          <li><a href="job-description.html">View all JDs &rarr;</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="Recruitment.html">IT Recruitment Services</a></li>
+          <li><a href="StaffingServices.dc.html">Permanent IT Staffing</a></li>
+          <li><a href="StaffingServices.dc.html">Temporary IT Staffing</a></li>
+          <li><a href="services.html#services">IT Outsourcing Services</a></li>
+          <li><a href="services.html#services">Recruitment Consultants</a></li>
+          <li><a href="services.html#services">HR Solutions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="services.html#about">About Us</a></li>
+          <li><a href="#top">Blog</a></li>
+          <li><a href="services.html#contact">Contact Us</a></li>
+          <li><a href="services.html#about">Team</a></li>
+          <li><a href="services.html#services">Vendor Empanelment</a></li>
+          <li><a href="services.html#services">Campus Placement</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-cities">
+      <h4>Our presence</h4>
+      <div class="city-list">
+        <a href="services.html#locations">Delhi</a>
+        <a href="services.html#locations">Mumbai</a>
+        <a href="bangalore.html">Bangalore</a>
+        <a href="services.html#locations">Chennai</a>
+        <a href="services.html#locations">Hyderabad</a>
+        <a href="services.html#locations">Pune</a>
+        <a href="services.html#locations">Ahmedabad</a>
+        <a href="services.html#locations">Gurgaon</a>
+        <a href="services.html#locations">Noida</a>
+        <a href="services.html#locations">Jaipur</a>
+        <a href="services.html#locations">Chandigarh</a>
+        <a href="services.html#locations">Kochi</a>
+        <a href="services.html#locations">Lucknow</a>
+        <a href="services.html#locations">Indore</a>
+        <a href="services.html#locations">Visakhapatnam</a>
+        <a href="services.html#locations">Thane</a>
+        <a href="services.html#locations">Ranchi</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        &copy; 2013&ndash;2026 hiringgo.com. All Rights Reserved.<br>
+        Aaganera Consulting Private Limited &mdash; Unit No.538, 5th Floor, JMD Megapolis, Sohna Road, Gurugram-122018
+      </div>
+      <div class="legal-links">
+        <a href="services.html#top">Privacy Policy</a>
+        <a href="services.html#top">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="dock">
+  <a href="tel:+911234567890" class="call" aria-label="Call now" title="Call now">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 2.9a2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.3-1.4a2 2 0 0 1 2.1-.4c.9.4 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg>
+  </a>
+  <a href="https://wa.me/911234567890" class="wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.1 8.1 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1s-.7.8-.9 1c-.2.2-.3.2-.6.1a6.6 6.6 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5s0-.4-.1-.5c-.1-.1-.6-1.5-.8-2-.2-.5-.4-.5-.6-.5h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-1 2.2c0 1.3 1 2.6 1.1 2.7.1.2 2 3 4.7 4.2a15.7 15.7 0 0 0 1.6.6 3.8 3.8 0 0 0 1.7.1c.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2s-.2-.2-.4-.3z"/></svg>
+  </a>
+  <a href="services.html#contact" aria-label="Send a query" title="Chat with us">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </a>
+</div>
+
+<script>
+  // Close mobile menu after tapping a link
+  document.querySelectorAll('.mobile-panel a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      document.getElementById('nav-check').checked = false;
+    });
+  });
+</script>
+
+</body>
+</html>

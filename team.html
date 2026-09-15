@@ -1,0 +1,1294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Our Team | HiringGo</title>
+<meta name="description" content="Meet the leadership and core team behind HiringGo's recruitment, staffing, and HR solutions for startups and enterprise organizations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: oklch(0.2 0.03 255);
+    --ink-soft: oklch(0.38 0.03 255);
+    --navy: #0b1f3a;
+    --navy-dark: #0a1628;
+    --paper: oklch(0.985 0.004 90);
+    --paper-alt: oklch(0.958 0.012 80);
+    --gold: #00adf2;
+    --gold-ink: #0077a8;
+    --line: oklch(0.88 0.012 90);
+    --line-on-navy: oklch(1 0 0 / 0.16);
+    --white: oklch(1 0 0);
+    --display: "Archivo", "Arial Black", Arial, sans-serif;
+    --body:
+      "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: var(--body);
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  ul { margin: 0; padding: 0; list-style: none; }
+  h1, h2, h3, h4 {
+    font-family: var(--display);
+    line-height: 1.12;
+    margin: 0 0 .5em;
+    letter-spacing: -0.01em;
+  }
+  p { margin: 0 0 1em; }
+  section { padding: clamp(3.5rem, 7vw, 6.5rem) 0; }
+  .wrap {
+    width: min(1180px, 100% - 2.5rem);
+    margin-inline: auto;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .5em;
+    font-family: var(--display);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--gold-ink);
+    margin-bottom: 1rem;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 26px;
+    height: 2px;
+    background: var(--gold);
+    display: inline-block;
+  }
+  .section-head { max-width: 640px; margin-bottom: 3rem; }
+  .section-head h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); color: var(--ink); }
+  .section-head p { color: var(--ink-soft); font-size: 1.05rem; margin-bottom: 0; }
+  .section-head.center { max-width: 680px; margin-inline: auto; text-align: center; }
+  .section-head.center .eyebrow::before { display: none; }
+  .section-head.on-navy h2 { color: var(--white); }
+  .section-head.on-navy p { color: oklch(1 0 0 / 0.72); }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6em;
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: .85rem;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    padding: 1em 1.9em;
+    border-radius: 0;
+    border: none;
+    cursor: pointer;
+    transition: filter .15s ease, transform .15s ease;
+    white-space: nowrap;
+  }
+  .btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
+  .btn svg { width: 16px; height: 16px; }
+  .btn-gold { background: var(--gold); color: var(--navy-dark); }
+  .btn-navy { background: var(--navy); color: var(--white); }
+  .btn-outline-navy {
+    background: transparent;
+    border: 1.5px solid oklch(1 0 0 / 0.35);
+    color: var(--white);
+  }
+  .btn-outline-navy:hover { border-color: var(--white); filter: none; }
+  .btn-outline-ink {
+    background: transparent;
+    border: 1.5px solid var(--ink);
+    color: var(--ink);
+  }
+  .btn-outline-ink:hover { border-color: var(--gold); color: var(--gold-ink); filter: none; }
+  .btn-ghost-link {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: .78rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--gold-ink);
+    display: inline-flex;
+    align-items: center;
+    gap: .4em;
+  }
+  .btn-ghost-link svg { width: 14px; height: 14px; transition: transform .15s ease; }
+  .btn-ghost-link:hover svg { transform: translateX(3px); }
+
+  /* ---------- Header (mega-menu, from Recruitment.html) ---------- */
+  header.site {
+    position: sticky;
+    top: 0;
+    z-index: 80;
+    width: 100%;
+    background: var(--navy-dark);
+    border-bottom: 1px solid var(--line-on-navy);
+  }
+  .nav-bar {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 2.2rem;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+  }
+  .brand { display: flex; align-items: center; gap: .6rem; }
+  .brand-mark { width: 14px; height: 14px; background: var(--gold); flex: none; }
+  .brand-name {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 1.375rem;
+    color: var(--white);
+    letter-spacing: -0.01em;
+  }
+  .nav-links { display: flex; align-items: center; gap: 2.25rem; }
+  .nav-plain { font-size: .9375rem; font-weight: 500; color: oklch(1 0 0 / 0.82); }
+  .nav-plain:hover { color: var(--white); }
+
+  .dd-trigger { position: relative; padding: .75rem 0; cursor: pointer; }
+  .dd-label {
+    display: flex; align-items: center; gap: .4rem;
+    font-size: .9375rem; font-weight: 600; color: var(--white);
+  }
+  .dd-chevron { transition: transform .15s ease; flex: none; }
+  .dd-trigger:hover .dd-chevron { transform: rotate(180deg); }
+  .dd-panel {
+    position: absolute; top: 100%; left: -1.5rem;
+    opacity: 0; visibility: hidden; transform: translateY(-6px);
+    transition: opacity .16s ease, transform .16s ease, visibility .16s;
+    pointer-events: none;
+    background: var(--paper);
+    box-shadow: 0 28px 56px -16px oklch(0.2 0.03 255 / 0.45);
+    border-top: 3px solid var(--gold);
+    padding: 1.375rem;
+    display: flex; flex-direction: column;
+    z-index: 50;
+    width: 280px;
+  }
+  .dd-trigger:hover .dd-panel { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; }
+  .dd-eyebrow {
+    font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--gold-ink); margin-bottom: .5rem;
+  }
+  .dd-sub { position: relative; }
+  .dd-item {
+    display: flex; align-items: center; justify-content: space-between; gap: .6rem;
+    font-size: .906rem; font-weight: 500; color: var(--ink); padding: .5rem 0;
+    transition: color .15s ease, padding-left .15s ease;
+  }
+  .dd-item:hover, .dd-sub:hover > .dd-item { color: var(--gold-ink); padding-left: .25rem; }
+  .dd-item.featured { color: var(--gold-ink); font-weight: 700; }
+  .dd-item svg { flex: none; }
+  .dd-flyout {
+    position: absolute; left: 100%; top: -.25rem; margin-left: .125rem;
+    min-width: 230px;
+    background: var(--paper);
+    box-shadow: 0 28px 56px -16px oklch(0.2 0.03 255 / 0.45);
+    border-top: 3px solid var(--gold);
+    padding: 1.1rem 1.25rem;
+    display: flex; flex-direction: column;
+    opacity: 0; visibility: hidden; transform: translateX(-6px);
+    transition: opacity .16s ease, transform .16s ease, visibility .16s;
+    pointer-events: none;
+    z-index: 60;
+  }
+  .dd-sub:hover > .dd-flyout { opacity: 1; visibility: visible; transform: translateX(0); pointer-events: auto; }
+  .dd-flyout a { font-size: .875rem; color: var(--ink-soft); padding: .3rem 0; }
+  .dd-flyout a:hover { color: var(--gold-ink); }
+  .dd-flyout a.view-all {
+    font-weight: 700; color: var(--gold-ink); border-top: 1px solid var(--line);
+    margin-top: .25rem; padding-top: .55rem;
+  }
+  .view-all-link {
+    font-size: .875rem; font-weight: 700; color: var(--gold-ink);
+    padding: .6rem 0 0; margin-top: .35rem; border-top: 1px solid var(--line);
+  }
+
+  .nav-cta {
+    font-family: var(--display);
+    background: var(--gold);
+    color: var(--navy-dark);
+    border: none;
+    padding: .75em 1.35em;
+    font-size: .875rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .header-actions { display: flex; align-items: center; gap: 1rem; }
+  .burger {
+    display: none;
+    width: 40px; height: 40px;
+    border: 1.5px solid var(--line-on-navy);
+    align-items: center; justify-content: center;
+    flex-direction: column; gap: 4px;
+    flex-shrink: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+  .burger span { width: 18px; height: 1.5px; background: var(--white); display: block; }
+  #nav-check { display: none; }
+  .mobile-panel { display: none; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    background: radial-gradient(120% 160% at 85% -10%, oklch(0.32 0.07 235 / 1), var(--navy-dark) 55%);
+    color: var(--white);
+    overflow: hidden;
+    padding: clamp(4rem, 9vw, 7.5rem) 0 clamp(3.5rem, 7vw, 6rem);
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle, oklch(1 0 0 / 0.14) 1.5px, transparent 1.5px);
+    background-size: 26px 26px;
+    -webkit-mask-image: linear-gradient(120deg, black, transparent 65%);
+            mask-image: linear-gradient(120deg, black, transparent 65%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: clamp(2.2rem, 4.6vw, 3.6rem);
+    color: var(--white);
+  }
+  .hero h1 em { font-style: normal; color: var(--gold); }
+  .hero p.lead {
+    font-size: 1.14rem;
+    color: oklch(1 0 0 / 0.76);
+    max-width: 46ch;
+    margin-bottom: 2rem;
+  }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.3rem; }
+  .hero-stats { display: flex; gap: clamp(1.5rem, 4vw, 2.8rem); flex-wrap: wrap; }
+  .hero-stats div strong {
+    display: block;
+    font-family: var(--display);
+    font-size: 1.7rem;
+    color: var(--white);
+  }
+  .hero-stats div span { font-size: .82rem; color: oklch(1 0 0 / 0.6); }
+
+  .hero-card {
+    position: relative;
+    background: oklch(1 0 0 / 0.06);
+    border: 1px solid var(--line-on-navy);
+    padding: 1.8rem;
+    backdrop-filter: blur(6px);
+  }
+  .hero-card-title { font-family: var(--display); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.1rem; }
+  .hero-steps { display: flex; flex-direction: column; gap: .9rem; }
+  .hero-step { display: flex; gap: .85rem; align-items: flex-start; }
+  .hero-step .num {
+    flex: none;
+    width: 28px; height: 28px;
+    background: oklch(1 0 0 / 0.1);
+    color: var(--white);
+    font-family: var(--display);
+    font-size: .85rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .hero-step p { margin: 0; font-size: .89rem; color: oklch(1 0 0 / 0.82); }
+  .hero-step strong { display: block; color: var(--white); font-size: .93rem; margin-bottom: .1rem; }
+
+  /* trust strip: scrolling marquee (text placeholders — swap spans for <img> logos later) */
+  .trust-strip { background: var(--navy); border-top: 1px solid var(--line-on-navy); overflow: hidden; }
+  .trust-inner {
+    width: min(1180px, 100% - 2.5rem);
+    margin-inline: auto;
+    padding: 1.1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .trust-label {
+    font-size: .78rem; letter-spacing: .08em; text-transform: uppercase;
+    color: oklch(1 0 0 / 0.5); font-weight: 700; flex: none;
+    font-family: var(--display);
+  }
+  .trust-track-mask {
+    flex: 1;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+            mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  }
+  .trust-track {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    width: max-content;
+    animation: trust-scroll 28s linear infinite;
+  }
+  .trust-strip:hover .trust-track { animation-play-state: paused; }
+  .trust-track span {
+    font-family: var(--display);
+    font-size: .88rem;
+    font-weight: 700;
+    color: oklch(1 0 0 / 0.72);
+    letter-spacing: .02em;
+    white-space: nowrap;
+  }
+  @keyframes trust-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ---------- Services ---------- */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 1.4rem;
+  }
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    padding: 1.75rem;
+    transition: border-color .15s ease;
+  }
+  .service-card:hover { border-color: var(--gold); }
+  .service-icon {
+    width: 44px; height: 44px;
+    background: var(--navy);
+    color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.1rem;
+  }
+  .service-icon svg { width: 22px; height: 22px; }
+  .service-card h3 { font-size: 1.03rem; color: var(--ink); margin-bottom: .5rem; }
+  .service-card p { font-size: .91rem; color: var(--ink-soft); margin-bottom: 1.1rem; }
+
+  /* ---------- Testimonials ---------- */
+  .testimonials { background: var(--navy-dark); color: var(--white); }
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.4rem;
+  }
+  .testi-card {
+    background: oklch(1 0 0 / 0.04);
+    border: 1px solid var(--line-on-navy);
+    padding: 1.9rem;
+  }
+  .stars { display: flex; gap: .2rem; color: var(--gold); margin-bottom: 1rem; }
+  .stars svg { width: 16px; height: 16px; }
+  .testi-card p.quote { font-size: 1rem; color: oklch(1 0 0 / 0.88); margin-bottom: 1.4rem; }
+  .testi-person { display: flex; align-items: center; gap: .8rem; }
+  .testi-avatar {
+    width: 42px; height: 42px;
+    background: var(--gold);
+    color: var(--navy-dark);
+    font-family: var(--display);
+    font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    font-size: .95rem;
+    flex: none;
+  }
+  .testi-person strong { display: block; font-size: .92rem; color: var(--white); }
+  .testi-person span { font-size: .8rem; color: oklch(1 0 0 / 0.6); }
+
+  /* ---------- Process ---------- */
+  .process { background: var(--paper-alt); }
+  .process-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .process-item {
+    background: var(--paper-alt);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+  }
+  .process-num {
+    font-family: var(--display);
+    font-size: .85rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    color: var(--gold-ink);
+    text-transform: uppercase;
+  }
+  .process-item h3 { font-size: 1.05rem; color: var(--ink); margin-bottom: 0; }
+  .process-item p { color: var(--ink-soft); font-size: .89rem; margin-bottom: 0; }
+
+  /* ---------- Blog ---------- */
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.4rem;
+  }
+  .blog-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+  }
+  .blog-thumb {
+    height: 150px;
+    background: linear-gradient(135deg, var(--navy), oklch(0.4 0.1 230));
+    position: relative;
+  }
+  .blog-thumb::after {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle, oklch(1 0 0 / 0.16) 1.5px, transparent 1.5px);
+    background-size: 20px 20px;
+  }
+  .blog-card .body { padding: 1.5rem 1.5rem 1.7rem; flex: 1; display: flex; flex-direction: column; }
+  .blog-card h3 { font-size: 1.02rem; color: var(--ink); margin-bottom: .55rem; }
+  .blog-card p { font-size: .9rem; color: var(--ink-soft); margin-bottom: 1.2rem; flex: 1; }
+
+  /* ---------- FAQ ---------- */
+  .faq-list { max-width: 820px; margin-inline: auto; display: flex; flex-direction: column; gap: .8rem; }
+  details.faq {
+    background: var(--white);
+    border: 1px solid var(--line);
+    padding: 0;
+  }
+  details.faq summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-weight: 600;
+    font-size: .98rem;
+    color: var(--ink);
+  }
+  details.faq summary::-webkit-details-marker { display: none; }
+  details.faq summary .plus {
+    flex: none;
+    width: 26px; height: 26px;
+    border: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+  details.faq summary .plus::before, details.faq summary .plus::after {
+    content: "";
+    position: absolute;
+    background: var(--gold-ink);
+  }
+  details.faq summary .plus::before { width: 10px; height: 2px; }
+  details.faq summary .plus::after { width: 2px; height: 10px; transition: transform .15s ease; }
+  details.faq[open] summary .plus::after { transform: rotate(90deg); }
+  details.faq[open] summary .plus { border-color: var(--gold); }
+  .faq-body { padding: 0 1.4rem 1.3rem; color: var(--ink-soft); font-size: .93rem; max-width: 72ch; }
+
+  /* ---------- CTA / Contact ---------- */
+  .cta { background: var(--navy-dark); color: var(--white); }
+  .cta-inner {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  .cta h2 { color: var(--white); font-size: clamp(1.6rem, 3.4vw, 2.3rem); }
+  .cta p { color: oklch(1 0 0 / 0.72); font-size: 1.02rem; }
+  .cta-details { display: flex; flex-direction: column; gap: .9rem; margin-top: 1.6rem; }
+  .cta-details div { display: flex; gap: .8rem; align-items: flex-start; font-size: .92rem; color: oklch(1 0 0 / 0.85); }
+  .cta-details svg { width: 18px; height: 18px; flex: none; margin-top: .2rem; color: var(--gold); }
+
+  .proposal-card {
+    background: var(--white);
+    color: var(--ink);
+    border: 1px solid var(--line);
+    padding: 1.9rem;
+  }
+  .proposal-card h3 { font-size: 1.2rem; margin-bottom: 1.2rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
+  .field { display: flex; flex-direction: column; gap: .35rem; margin-bottom: .9rem; }
+  .field label { font-size: .8rem; font-weight: 600; color: var(--ink-soft); }
+  .field select, .field input, .field textarea {
+    font-family: var(--body);
+    font-size: .92rem;
+    padding: .75em .9em;
+    border-radius: 0;
+    border: 1.5px solid var(--line);
+    background: transparent;
+    color: var(--ink);
+  }
+  .field select:focus, .field input:focus, .field textarea:focus {
+    outline: 2px solid var(--gold);
+    outline-offset: 1px;
+  }
+  .field textarea { resize: vertical; min-height: 80px; font-family: var(--body); }
+  .proposal-card .btn { width: 100%; margin-top: .3rem; }
+  .form-note { font-size: .78rem; color: var(--ink-soft); margin-top: .8rem; text-align: center; }
+  #form-success {
+    display: none;
+    background: oklch(0.94 0.05 155);
+    color: oklch(0.32 0.09 155);
+    border-radius: 10px;
+    padding: .8em 1em;
+    font-size: .87rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  #form-success.show { display: block; }
+
+  /* ---------- Footer ---------- */
+  footer.site { background: var(--navy-dark); color: oklch(1 0 0 / 0.7); padding-top: 4rem; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.3fr repeat(4, 1fr);
+    gap: 2rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--line-on-navy);
+  }
+  .footer-brand .brand { margin-bottom: .9rem; }
+  .footer-brand p { font-size: .87rem; color: oklch(1 0 0 / 0.55); max-width: 30ch; }
+  .footer-col h4 {
+    font-family: var(--display);
+    font-size: .78rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 1.1rem;
+  }
+  .footer-col ul { display: flex; flex-direction: column; gap: .65rem; }
+  .footer-col a { font-size: .87rem; color: oklch(1 0 0 / 0.6); }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-cities { padding: 2rem 0; border-bottom: 1px solid var(--line-on-navy); }
+  .footer-cities h4 {
+    font-family: var(--display); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--white); margin-bottom: 1rem;
+  }
+  .city-list { display: flex; flex-wrap: wrap; gap: .6rem .9rem; }
+  .city-list a { font-size: .84rem; color: oklch(1 0 0 / 0.55); }
+  .city-list a:hover { color: var(--gold); }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.6rem 0 2rem;
+    font-size: .82rem;
+    color: oklch(1 0 0 / 0.45);
+  }
+  .footer-bottom .legal-links { display: flex; gap: 1.4rem; }
+  .footer-bottom .legal-links a { color: oklch(1 0 0 / 0.55); }
+  .footer-bottom .legal-links a:hover { color: var(--gold); }
+
+  /* ---------- Floating dock ---------- */
+  .dock {
+    position: fixed;
+    right: 1.1rem;
+    bottom: 1.1rem;
+    z-index: 70;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+  }
+  .dock a {
+    width: 46px; height: 46px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--navy-dark);
+    color: var(--white);
+    border: 1px solid var(--line-on-navy);
+    box-shadow: 0 10px 24px -10px oklch(0.2 0.05 255 / 0.5);
+  }
+  .dock a.wa { background: oklch(0.6 0.15 150); }
+  .dock a.call { background: var(--gold); color: var(--navy-dark); }
+  .dock a svg { width: 20px; height: 20px; }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .cta-inner { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: repeat(2, 1fr); }
+    .process-list { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 760px) {
+    .nav-bar { height: 68px; padding: 0 1.25rem; }
+    .nav-links { display: none; }
+    .burger { display: flex; }
+    #nav-check:checked ~ .mobile-panel { max-height: 640px; padding-top: .5rem; padding-bottom: 1rem; }
+    .mobile-panel {
+      display: block;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .25s ease;
+      background: var(--navy-dark);
+      border-top: 1px solid var(--line-on-navy);
+    }
+    .mobile-panel-inner { display: flex; flex-direction: column; gap: .2rem; width: min(1180px, 100% - 2.5rem); margin-inline: auto; }
+    .mobile-panel a.nav-plain, .mobile-panel a.nav-cta { padding: .75em .2em; font-size: .95rem; color: oklch(1 0 0 / 0.85); border-bottom: 1px solid var(--line-on-navy); display: block; }
+    .mobile-panel a.nav-cta { background: transparent; color: var(--gold); font-weight: 700; padding: .75em .2em; border-bottom: none; }
+    .mobile-panel details { border-bottom: 1px solid var(--line-on-navy); }
+    .mobile-panel summary {
+      list-style: none; cursor: pointer; padding: .75em .2em;
+      font-size: .95rem; color: oklch(1 0 0 / 0.85); font-weight: 600;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .mobile-panel summary::-webkit-details-marker { display: none; }
+    .mobile-panel details[open] summary { color: var(--white); }
+    .mobile-panel .sub-links { display: flex; flex-direction: column; gap: .1rem; padding: 0 0 .6em 1em; }
+    .mobile-panel .sub-links a { padding: .5em .2em; font-size: .875rem; color: oklch(1 0 0 / 0.65); border-bottom: none; }
+    .process-list { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 520px) {
+    .footer-top { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- Team hero ---------- */
+  .team-hero {
+    position: relative;
+    background: radial-gradient(120% 160% at 85% -10%, oklch(0.32 0.07 235 / 1), var(--navy-dark) 55%);
+    color: var(--white);
+    overflow: hidden;
+    padding: clamp(3.5rem, 7vw, 5.5rem) 0 0;
+  }
+  .team-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, oklch(1 0 0 / 0.14) 1.5px, transparent 1.5px);
+    background-size: 26px 26px;
+    -webkit-mask-image: linear-gradient(120deg, black, transparent 65%);
+            mask-image: linear-gradient(120deg, black, transparent 65%);
+    pointer-events: none;
+  }
+  .team-hero .wrap { position: relative; max-width: 760px; }
+  .team-hero h1 { font-size: clamp(2rem, 4.2vw, 3.1rem); color: var(--white); margin-bottom: .9rem; }
+  .team-hero p.lead { font-size: 1.08rem; color: oklch(1 0 0 / 0.76); max-width: 60ch; margin-bottom: 2.3rem; }
+
+  .stats-strip {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--line-on-navy);
+  }
+  .stats-strip div {
+    padding: 1.8rem 1rem;
+    text-align: center;
+    border-right: 1px solid var(--line-on-navy);
+  }
+  .stats-strip div:last-child { border-right: none; }
+  .stats-strip strong {
+    display: block;
+    font-family: var(--display);
+    font-size: 1.9rem;
+    color: var(--gold);
+    margin-bottom: .25rem;
+  }
+  .stats-strip span { font-size: .82rem; color: oklch(1 0 0 / 0.65); }
+
+  /* ---------- Team cards ---------- */
+  .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.4rem; }
+  .team-grid.leadership { grid-template-columns: repeat(2, 1fr); margin-bottom: 1.4rem; }
+  .team-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: border-color .15s ease, box-shadow .15s ease;
+  }
+  .team-card:hover { border-color: var(--gold); box-shadow: 0 10px 24px -18px oklch(0.2 0.05 250 / 0.35); }
+  .team-photo-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .team-grid.leadership .team-photo-wrap { aspect-ratio: 16 / 10; }
+  .team-photo-wrap::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle, oklch(1 0 0 / 0.09) 1.5px, transparent 1.5px);
+    background-size: 20px 20px;
+  }
+  .team-photo-wrap.tone-a { background: linear-gradient(155deg, var(--navy) 0%, var(--navy-dark) 100%); }
+  .team-photo-wrap.tone-b { background: linear-gradient(155deg, oklch(0.32 0.07 235) 0%, var(--navy) 65%, var(--navy-dark) 100%); }
+  .team-photo-wrap svg.avatar-icon {
+    position: relative;
+    width: 44%; max-width: 110px;
+    color: oklch(1 0 0 / 0.22);
+  }
+  .team-photo-badge {
+    position: absolute;
+    right: .8rem; bottom: .8rem;
+    width: 36px; height: 36px;
+    background: var(--gold);
+    color: var(--navy-dark);
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: .82rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .team-grid.leadership .team-photo-badge { width: 42px; height: 42px; font-size: .92rem; }
+  .team-card-body {
+    padding: 1.4rem 1.6rem 1.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  .team-card-body h3 { font-size: 1.05rem; color: var(--ink); margin: 0; }
+  .team-card-body .role {
+    font-family: var(--display);
+    font-size: .74rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--gold-ink);
+    margin-bottom: .3rem;
+  }
+  .team-card-body p.bio { font-size: .89rem; color: var(--ink-soft); margin: 0; }
+
+  /* ---------- Careers CTA ---------- */
+  .careers-cta { background: var(--navy-dark); color: var(--white); }
+  .careers-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .careers-inner h2 { color: var(--white); margin-bottom: .5rem; }
+  .careers-inner p { color: oklch(1 0 0 / 0.72); margin-bottom: 0; max-width: 48ch; }
+  .careers-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  /* ---------- Process teaser ---------- */
+  .process-teaser {
+    background: var(--paper-alt);
+    border: 1px solid var(--line);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .process-teaser h3 { font-size: 1.15rem; color: var(--ink); margin-bottom: .4rem; }
+  .process-teaser p { font-size: .92rem; color: var(--ink-soft); margin-bottom: 0; max-width: 52ch; }
+
+  @media (max-width: 760px) {
+    .stats-strip { grid-template-columns: repeat(2, 1fr); }
+    .stats-strip div { border-bottom: 1px solid var(--line-on-navy); }
+    .team-grid.leadership { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+
+<header class="site">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-bar">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">HiringGo</span>
+    </a>
+
+    <div class="nav-links">
+
+      <div class="dd-trigger">
+        <span class="dd-label">Services
+          <svg class="dd-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </span>
+        <div class="dd-panel">
+          <span class="dd-eyebrow">Services</span>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="Recruitment.html">Recruitment Services
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout">
+              <a href="Recruitment.html">Recruitment Services</a>
+              <a href="services.html#services">Recruitment Consultants</a>
+            </div>
+          </div>
+
+          <div class="dd-sub">
+            <a class="dd-item featured" href="StaffingServices.dc.html">Staffing Services
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout" style="min-width:250px">
+              <a href="services.html#services">Permanent IT Staffing Services</a>
+              <a href="services.html#services">Temporary IT Staffing Services</a>
+              <a href="services.html#services">IT Staffing Services</a>
+            </div>
+          </div>
+
+          <a class="dd-item" href="services.html#services">Outsourcing Services</a>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="services.html#services">Third Party Payroll
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout">
+              <a href="services.html#services">Payroll Outsourcing Services</a>
+              <a href="services.html#services">Payroll Solutions Company</a>
+              <a href="services.html#services">Payroll for Small Business</a>
+            </div>
+          </div>
+
+          <a class="dd-item" href="services.html#services">HR &amp; Recruitment Process Outsourcing</a>
+          <a class="dd-item" href="services.html#services">HR Solutions</a>
+          <a class="view-all-link" href="services.html#services">View all services &rarr;</a>
+        </div>
+      </div>
+
+      <div class="dd-trigger">
+        <span class="dd-label">Locations
+          <svg class="dd-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </span>
+        <div class="dd-panel" style="width:220px">
+          <span class="dd-eyebrow">Locations</span>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="services.html#locations">Delhi
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout" style="min-width:250px">
+              <a href="services.html#locations">IT Recruitment Agency in Delhi</a>
+              <a href="services.html#locations">IT Staffing Services in Delhi</a>
+              <a class="view-all" href="services.html#locations">View all services in Delhi &rarr;</a>
+            </div>
+          </div>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="services.html#locations">Gurgaon
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout" style="min-width:250px">
+              <a href="services.html#locations">IT Recruitment Agency in Gurgaon</a>
+              <a href="services.html#locations">IT Staffing Services in Gurgaon</a>
+              <a class="view-all" href="services.html#locations">View all services in Gurgaon &rarr;</a>
+            </div>
+          </div>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="services.html#locations">Noida
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout" style="min-width:250px">
+              <a href="services.html#locations">IT Recruitment Agency in Noida</a>
+              <a href="services.html#locations">IT Staffing Services in Noida</a>
+              <a class="view-all" href="services.html#locations">View all services in Noida &rarr;</a>
+            </div>
+          </div>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="services.html#locations">Mumbai
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout" style="min-width:250px">
+              <a href="services.html#locations">IT Recruitment Agency in Mumbai</a>
+              <a href="services.html#locations">IT Staffing Services in Mumbai</a>
+              <a class="view-all" href="services.html#locations">View all services in Mumbai &rarr;</a>
+            </div>
+          </div>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="bangalore.html">Bangalore
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout" style="min-width:250px">
+              <a href="bangalore.html">IT Recruitment Agency in Bangalore</a>
+              <a href="bangalore.html">IT Staffing Services in Bangalore</a>
+              <a class="view-all" href="bangalore.html">View all services in Bangalore &rarr;</a>
+            </div>
+          </div>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="services.html#locations">Pune
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout" style="min-width:250px">
+              <a href="services.html#locations">IT Recruitment Agency in Pune</a>
+              <a href="services.html#locations">IT Staffing Services in Pune</a>
+              <a class="view-all" href="services.html#locations">View all services in Pune &rarr;</a>
+            </div>
+          </div>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="services.html#locations">Hyderabad
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout" style="min-width:250px">
+              <a href="services.html#locations">IT Recruitment Agency in Hyderabad</a>
+              <a href="services.html#locations">IT Staffing Services in Hyderabad</a>
+              <a class="view-all" href="services.html#locations">View all services in Hyderabad &rarr;</a>
+            </div>
+          </div>
+
+          <a class="view-all-link" href="services.html#locations">All India Locations &rarr;</a>
+        </div>
+      </div>
+
+      <a class="nav-plain" href="blogs.html">Blog</a>
+      <a class="nav-plain" href="contact-us.html#jobseeker">Job Seeker</a>
+      <a class="nav-plain" href="contact-us.html">Contact</a>
+    </div>
+
+    <div class="header-actions">
+      <a href="contact-us.html" class="nav-cta">GET IN TOUCH</a>
+      <label for="nav-check" class="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </label>
+    </div>
+  </div>
+
+  <div class="mobile-panel">
+    <div class="mobile-panel-inner">
+      <details>
+        <summary>Services</summary>
+        <div class="sub-links">
+          <a href="Recruitment.html">Recruitment Services</a>
+          <a href="services.html#services">Recruitment Consultants</a>
+          <a href="StaffingServices.dc.html">Staffing Services</a>
+          <a href="services.html#services">Outsourcing Services</a>
+          <a href="services.html#services">Third Party Payroll</a>
+          <a href="services.html#services">HR &amp; RPO</a>
+          <a href="services.html#services">HR Solutions</a>
+        </div>
+      </details>
+      <details>
+        <summary>Locations</summary>
+        <div class="sub-links">
+          <a href="services.html#locations">Delhi</a>
+          <a href="services.html#locations">Gurgaon</a>
+          <a href="services.html#locations">Noida</a>
+          <a href="services.html#locations">Mumbai</a>
+          <a href="bangalore.html">Bangalore</a>
+          <a href="services.html#locations">Pune</a>
+          <a href="services.html#locations">Hyderabad</a>
+        </div>
+      </details>
+      <a class="nav-plain" href="blogs.html">Blog</a>
+      <a class="nav-plain" href="contact-us.html#jobseeker">Job Seeker</a>
+      <a class="nav-plain" href="contact-us.html">Contact</a>
+      <a class="nav-cta" href="contact-us.html">GET IN TOUCH</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- TEAM HERO -->
+  <section class="team-hero">
+    <div class="wrap">
+      <div class="eyebrow" style="color:var(--gold)">Our Team</div>
+      <h1>Meet the team behind HiringGo</h1>
+      <p class="lead">HiringGo is built by a small, focused team that leads recruitment strategy, staffing operations, HR, marketing, accounts, and business development &mdash; so every client and candidate works with people who know the process end to end.</p>
+    </div>
+    <div class="stats-strip">
+      <div><strong>2013</strong><span>Serving clients since</span></div>
+      <div><strong>40+</strong><span>Trained recruitment professionals</span></div>
+      <div><strong>17+</strong><span>Cities served across India</span></div>
+      <div><strong>7</strong><span>Core leadership &amp; team leads</span></div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP -->
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Leadership</div>
+        <h2>The people setting the direction</h2>
+        <p>Our founder and chief architect set the vision, culture, and standards that the rest of the team builds on every day.</p>
+      </div>
+      <div class="team-grid leadership">
+        <div class="team-card">
+          <div class="team-photo-wrap tone-a">
+            <svg class="avatar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8.2" r="3.6"/><path d="M4.5 20c1.3-4.4 4.3-6.8 7.5-6.8s6.2 2.4 7.5 6.8"/></svg>
+            <span class="team-photo-badge">GK</span>
+          </div>
+          <div class="team-card-body">
+            <h3>Gagandeep Kaur</h3>
+            <span class="role">Founder &amp; Director</span>
+            <p class="bio">Our dedicated founder and director has a wealth of experience in talent acquisition and a keen eye for identifying top-tier professionals for organizations. She is highly aware of advanced methodologies, assuring that every recruitment effort aligns with the vision of the business.</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo-wrap tone-b">
+            <svg class="avatar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8.2" r="3.6"/><path d="M4.5 20c1.3-4.4 4.3-6.8 7.5-6.8s6.2 2.4 7.5 6.8"/></svg>
+            <span class="team-photo-badge">AT</span>
+          </div>
+          <div class="team-card-body">
+            <h3>Ashutosh Taiwal</h3>
+            <span class="role">Chief Architect</span>
+            <p class="bio">Our chief architect provides visionary leadership and a strategic framework for the company. With a strong ambition to grow, he guides HiringGo toward innovation, fosters a culture of collaboration, and maintains overall discipline across the organization.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE TEAM -->
+  <section style="background:var(--paper-alt)">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Core Team</div>
+        <h2>The people you&rsquo;ll work with</h2>
+        <p>From HR and recruitment to marketing, accounts, and business development &mdash; here&rsquo;s who keeps HiringGo running day to day.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-photo-wrap tone-a">
+            <svg class="avatar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8.2" r="3.6"/><path d="M4.5 20c1.3-4.4 4.3-6.8 7.5-6.8s6.2 2.4 7.5 6.8"/></svg>
+            <span class="team-photo-badge">ND</span>
+          </div>
+          <div class="team-card-body">
+            <h3>Neha Dheeman</h3>
+            <span class="role">HR Manager</span>
+            <p class="bio">Our HR manager nurtures a positive atmosphere in the workplace, promoting smooth alignment across all employees while framing policies and managing talent retention. As a trusted advisor, she plays a role in both management and talent development.</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo-wrap tone-b">
+            <svg class="avatar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8.2" r="3.6"/><path d="M4.5 20c1.3-4.4 4.3-6.8 7.5-6.8s6.2 2.4 7.5 6.8"/></svg>
+            <span class="team-photo-badge">AS</span>
+          </div>
+          <div class="team-card-body">
+            <h3>Anjusha Sharma</h3>
+            <span class="role">Recruiter Manager</span>
+            <p class="bio">Our passionate recruiter manager is known for her unwavering commitment and expertise in candidate sourcing, keeping pace with what organizations are looking for. She believes every organization should be staffed with the best minds.</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo-wrap tone-a">
+            <svg class="avatar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8.2" r="3.6"/><path d="M4.5 20c1.3-4.4 4.3-6.8 7.5-6.8s6.2 2.4 7.5 6.8"/></svg>
+            <span class="team-photo-badge">AA</span>
+          </div>
+          <div class="team-card-body">
+            <h3>Aamir Aftab</h3>
+            <span class="role">Business Development Manager</span>
+            <p class="bio">As business development manager, he drives strategic partnerships with his extensive network and sharp business instincts, handling planning, opportunities, and tailored solutions for clients &mdash; fostering loyal relationships and revenue growth.</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo-wrap tone-b">
+            <svg class="avatar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8.2" r="3.6"/><path d="M4.5 20c1.3-4.4 4.3-6.8 7.5-6.8s6.2 2.4 7.5 6.8"/></svg>
+            <span class="team-photo-badge">SA</span>
+          </div>
+          <div class="team-card-body">
+            <h3>Sahil Ahuja</h3>
+            <span class="role">Digital Marketing Manager</span>
+            <p class="bio">Our digital marketing manager manages strategy and enhances brand visibility and engagement across diverse channels. With a keen understanding of market trends, he drives impactful campaigns and leads the digital marketing team.</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo-wrap tone-a">
+            <svg class="avatar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8.2" r="3.6"/><path d="M4.5 20c1.3-4.4 4.3-6.8 7.5-6.8s6.2 2.4 7.5 6.8"/></svg>
+            <span class="team-photo-badge">AY</span>
+          </div>
+          <div class="team-card-body">
+            <h3>Arun Yadav</h3>
+            <span class="role">Admin &amp; Accounts Manager</span>
+            <p class="bio">Our accounts manager maintains precise oversight of accounts and finance. He serves as the backbone of the organization, known for meticulous financial management, and is responsible for all financial operations &mdash; ensuring compliance, accuracy, and transparency.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS TEASER -->
+  <section>
+    <div class="wrap">
+      <div class="process-teaser">
+        <div>
+          <h3>How our team works together</h3>
+          <p>Every requirement moves through the same 6-step process &mdash; from understanding your needs to AI-assisted shortlisting, client review, and onboarding.</p>
+        </div>
+        <a href="about-us.html" class="btn btn-outline-ink">See our process</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREERS CTA -->
+  <section class="careers-cta">
+    <div class="wrap careers-inner">
+      <div>
+        <h2>Want to join the HiringGo team?</h2>
+        <p>We&rsquo;re always open to meeting strong recruiters, HR professionals, and operators. Send your resume and we&rsquo;ll be in touch within one hour.</p>
+      </div>
+      <div class="careers-actions">
+        <a href="mailto:jobs@hiringgo.com" class="btn btn-gold">Email your resume</a>
+        <a href="https://wa.me/911234567890" target="_blank" rel="noopener" class="btn btn-outline-navy">WhatsApp us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="wrap">
+      <div class="section-head center">
+        <div class="eyebrow">FAQ</div>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq" open>
+          <summary>Who leads HiringGo?<span class="plus"></span></summary>
+          <div class="faq-body">HiringGo is led by founder and director Gagandeep Kaur alongside chief architect Ashutosh Taiwal, supported by a core team covering HR, recruitment, marketing, accounts, and business development.</div>
+        </details>
+        <details class="faq">
+          <summary>How do I contact a specific team or department?<span class="plus"></span></summary>
+          <div class="faq-body">For hiring requirements, email hello@hiringgo.com. For job applications or resumes, email jobs@hiringgo.com. You can also reach the wider team through our <a href="contact-us.html" style="color:var(--gold-ink); font-weight:600">Contact Us</a> page.</div>
+        </details>
+        <details class="faq">
+          <summary>Is HiringGo hiring for internal roles?<span class="plus"></span></summary>
+          <div class="faq-body">We&rsquo;re always open to meeting strong recruiters, HR professionals, and operators. Send your resume to jobs@hiringgo.com and our team will review it.</div>
+        </details>
+        <details class="faq">
+          <summary>Where is the HiringGo team based?<span class="plus"></span></summary>
+          <div class="faq-body">Our registered office is in Gurugram, and our team supports clients and candidates across 17+ cities in India.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site" id="locations">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark"></span>
+          <span class="brand-name">HiringGo</span>
+        </a>
+        <p>Reliable, efficient workforce solutions &mdash; manpower supply, IT staffing, and HR process management for growing businesses.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Hire Developers</h4>
+        <ul>
+          <li><a href="services.html#services">Full Stack Developer</a></li>
+          <li><a href="services.html#services">Java Developer</a></li>
+          <li><a href="services.html#services">Python Developer</a></li>
+          <li><a href="services.html#services">React Developer</a></li>
+          <li><a href="services.html#services">DevOps Engineer</a></li>
+          <li><a href="services.html#services">Data Scientist</a></li>
+          <li><a href="services.html#services">View all roles &rarr;</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Job Descriptions</h4>
+        <ul>
+          <li><a href="job-description.html">Software Engineer JD</a></li>
+          <li><a href="job-description.html">QA Engineer JD</a></li>
+          <li><a href="job-description.html">Product Manager JD</a></li>
+          <li><a href="job-description.html">UI/UX Designer JD</a></li>
+          <li><a href="job-description.html">HR Manager JD</a></li>
+          <li><a href="job-description.html">View all JDs &rarr;</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="Recruitment.html">IT Recruitment Services</a></li>
+          <li><a href="StaffingServices.dc.html">Permanent IT Staffing</a></li>
+          <li><a href="StaffingServices.dc.html">Temporary IT Staffing</a></li>
+          <li><a href="services.html#services">IT Outsourcing Services</a></li>
+          <li><a href="services.html#services">Recruitment Consultants</a></li>
+          <li><a href="services.html#services">HR Solutions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="blogs.html">Blog</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+          <li><a href="#top">Team</a></li>
+          <li><a href="services.html#services">Vendor Empanelment</a></li>
+          <li><a href="services.html#services">Campus Placement</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-cities">
+      <h4>Our presence</h4>
+      <div class="city-list">
+        <a href="services.html#locations">Delhi</a>
+        <a href="services.html#locations">Mumbai</a>
+        <a href="bangalore.html">Bangalore</a>
+        <a href="services.html#locations">Chennai</a>
+        <a href="services.html#locations">Hyderabad</a>
+        <a href="services.html#locations">Pune</a>
+        <a href="services.html#locations">Ahmedabad</a>
+        <a href="services.html#locations">Gurgaon</a>
+        <a href="services.html#locations">Noida</a>
+        <a href="services.html#locations">Jaipur</a>
+        <a href="services.html#locations">Chandigarh</a>
+        <a href="services.html#locations">Kochi</a>
+        <a href="services.html#locations">Lucknow</a>
+        <a href="services.html#locations">Indore</a>
+        <a href="services.html#locations">Visakhapatnam</a>
+        <a href="services.html#locations">Thane</a>
+        <a href="services.html#locations">Ranchi</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        &copy; 2013&ndash;2026 hiringgo.com. All Rights Reserved.<br>
+        Aaganera Consulting Private Limited &mdash; Unit No.538, 5th Floor, JMD Megapolis, Sohna Road, Gurugram-122018
+      </div>
+      <div class="legal-links">
+        <a href="services.html#top">Privacy Policy</a>
+        <a href="services.html#top">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="dock">
+  <a href="tel:+911234567890" class="call" aria-label="Call now" title="Call now">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 2.9a2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.3-1.4a2 2 0 0 1 2.1-.4c.9.4 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg>
+  </a>
+  <a href="https://wa.me/911234567890" class="wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.1 8.1 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1s-.7.8-.9 1c-.2.2-.3.2-.6.1a6.6 6.6 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5s0-.4-.1-.5c-.1-.1-.6-1.5-.8-2-.2-.5-.4-.5-.6-.5h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-1 2.2c0 1.3 1 2.6 1.1 2.7.1.2 2 3 4.7 4.2a15.7 15.7 0 0 0 1.6.6 3.8 3.8 0 0 0 1.7.1c.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2s-.2-.2-.4-.3z"/></svg>
+  </a>
+  <a href="contact-us.html" aria-label="Send a query" title="Contact us">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </a>
+</div>
+
+<script>
+  document.querySelectorAll(".mobile-panel a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      document.getElementById("nav-check").checked = false;
+    });
+  });
+</script>
+
+</body>
+</html>

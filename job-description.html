@@ -1,0 +1,1398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Job Description Templates | HiringGo</title>
+<meta name="description" content="Browse ready-to-use job description templates for developer, engineering, design, analyst, and management roles, or request a custom JD from HiringGo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: oklch(0.2 0.03 255);
+    --ink-soft: oklch(0.38 0.03 255);
+    --navy: #0b1f3a;
+    --navy-dark: #0a1628;
+    --paper: oklch(0.985 0.004 90);
+    --paper-alt: oklch(0.958 0.012 80);
+    --gold: #00adf2;
+    --gold-ink: #0077a8;
+    --line: oklch(0.88 0.012 90);
+    --line-on-navy: oklch(1 0 0 / 0.16);
+    --white: oklch(1 0 0);
+    --display: "Archivo", "Arial Black", Arial, sans-serif;
+    --body:
+      "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: var(--body);
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  ul { margin: 0; padding: 0; list-style: none; }
+  h1, h2, h3, h4 {
+    font-family: var(--display);
+    line-height: 1.12;
+    margin: 0 0 .5em;
+    letter-spacing: -0.01em;
+  }
+  p { margin: 0 0 1em; }
+  section { padding: clamp(3.5rem, 7vw, 6.5rem) 0; }
+  .wrap {
+    width: min(1180px, 100% - 2.5rem);
+    margin-inline: auto;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .5em;
+    font-family: var(--display);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--gold-ink);
+    margin-bottom: 1rem;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 26px;
+    height: 2px;
+    background: var(--gold);
+    display: inline-block;
+  }
+  .section-head { max-width: 640px; margin-bottom: 3rem; }
+  .section-head h2 { font-size: clamp(1.7rem, 3.4vw, 2.5rem); color: var(--ink); }
+  .section-head p { color: var(--ink-soft); font-size: 1.05rem; margin-bottom: 0; }
+  .section-head.center { max-width: 680px; margin-inline: auto; text-align: center; }
+  .section-head.center .eyebrow::before { display: none; }
+  .section-head.on-navy h2 { color: var(--white); }
+  .section-head.on-navy p { color: oklch(1 0 0 / 0.72); }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6em;
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: .85rem;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    padding: 1em 1.9em;
+    border-radius: 0;
+    border: none;
+    cursor: pointer;
+    transition: filter .15s ease, transform .15s ease;
+    white-space: nowrap;
+  }
+  .btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
+  .btn svg { width: 16px; height: 16px; }
+  .btn-gold { background: var(--gold); color: var(--navy-dark); }
+  .btn-navy { background: var(--navy); color: var(--white); }
+  .btn-outline-navy {
+    background: transparent;
+    border: 1.5px solid oklch(1 0 0 / 0.35);
+    color: var(--white);
+  }
+  .btn-outline-navy:hover { border-color: var(--white); filter: none; }
+  .btn-outline-ink {
+    background: transparent;
+    border: 1.5px solid var(--ink);
+    color: var(--ink);
+  }
+  .btn-outline-ink:hover { border-color: var(--gold); color: var(--gold-ink); filter: none; }
+  .btn-ghost-link {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: .78rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--gold-ink);
+    display: inline-flex;
+    align-items: center;
+    gap: .4em;
+  }
+  .btn-ghost-link svg { width: 14px; height: 14px; transition: transform .15s ease; }
+  .btn-ghost-link:hover svg { transform: translateX(3px); }
+
+  /* ---------- Header (mega-menu, from Recruitment.html) ---------- */
+  header.site {
+    position: sticky;
+    top: 0;
+    z-index: 80;
+    width: 100%;
+    background: var(--navy-dark);
+    border-bottom: 1px solid var(--line-on-navy);
+  }
+  .nav-bar {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 2.2rem;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+  }
+  .brand { display: flex; align-items: center; gap: .6rem; }
+  .brand-mark { width: 14px; height: 14px; background: var(--gold); flex: none; }
+  .brand-name {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 1.375rem;
+    color: var(--white);
+    letter-spacing: -0.01em;
+  }
+  .nav-links { display: flex; align-items: center; gap: 2.25rem; }
+  .nav-plain { font-size: .9375rem; font-weight: 500; color: oklch(1 0 0 / 0.82); }
+  .nav-plain:hover { color: var(--white); }
+
+  .dd-trigger { position: relative; padding: .75rem 0; cursor: pointer; }
+  .dd-label {
+    display: flex; align-items: center; gap: .4rem;
+    font-size: .9375rem; font-weight: 600; color: var(--white);
+  }
+  .dd-chevron { transition: transform .15s ease; flex: none; }
+  .dd-trigger:hover .dd-chevron { transform: rotate(180deg); }
+  .dd-panel {
+    position: absolute; top: 100%; left: -1.5rem;
+    opacity: 0; visibility: hidden; transform: translateY(-6px);
+    transition: opacity .16s ease, transform .16s ease, visibility .16s;
+    pointer-events: none;
+    background: var(--paper);
+    box-shadow: 0 28px 56px -16px oklch(0.2 0.03 255 / 0.45);
+    border-top: 3px solid var(--gold);
+    padding: 1.375rem;
+    display: flex; flex-direction: column;
+    z-index: 50;
+    width: 280px;
+  }
+  .dd-trigger:hover .dd-panel { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; }
+  .dd-eyebrow {
+    font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--gold-ink); margin-bottom: .5rem;
+  }
+  .dd-sub { position: relative; }
+  .dd-item {
+    display: flex; align-items: center; justify-content: space-between; gap: .6rem;
+    font-size: .906rem; font-weight: 500; color: var(--ink); padding: .5rem 0;
+    transition: color .15s ease, padding-left .15s ease;
+  }
+  .dd-item:hover, .dd-sub:hover > .dd-item { color: var(--gold-ink); padding-left: .25rem; }
+  .dd-item.featured { color: var(--gold-ink); font-weight: 700; }
+  .dd-item svg { flex: none; }
+  .dd-flyout {
+    position: absolute; left: 100%; top: -.25rem; margin-left: .125rem;
+    min-width: 230px;
+    background: var(--paper);
+    box-shadow: 0 28px 56px -16px oklch(0.2 0.03 255 / 0.45);
+    border-top: 3px solid var(--gold);
+    padding: 1.1rem 1.25rem;
+    display: flex; flex-direction: column;
+    opacity: 0; visibility: hidden; transform: translateX(-6px);
+    transition: opacity .16s ease, transform .16s ease, visibility .16s;
+    pointer-events: none;
+    z-index: 60;
+  }
+  .dd-sub:hover > .dd-flyout { opacity: 1; visibility: visible; transform: translateX(0); pointer-events: auto; }
+  .dd-flyout a { font-size: .875rem; color: var(--ink-soft); padding: .3rem 0; }
+  .dd-flyout a:hover { color: var(--gold-ink); }
+  .dd-flyout a.view-all {
+    font-weight: 700; color: var(--gold-ink); border-top: 1px solid var(--line);
+    margin-top: .25rem; padding-top: .55rem;
+  }
+  .view-all-link {
+    font-size: .875rem; font-weight: 700; color: var(--gold-ink);
+    padding: .6rem 0 0; margin-top: .35rem; border-top: 1px solid var(--line);
+  }
+
+  .nav-cta {
+    font-family: var(--display);
+    background: var(--gold);
+    color: var(--navy-dark);
+    border: none;
+    padding: .75em 1.35em;
+    font-size: .875rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .header-actions { display: flex; align-items: center; gap: 1rem; }
+  .burger {
+    display: none;
+    width: 40px; height: 40px;
+    border: 1.5px solid var(--line-on-navy);
+    align-items: center; justify-content: center;
+    flex-direction: column; gap: 4px;
+    flex-shrink: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+  .burger span { width: 18px; height: 1.5px; background: var(--white); display: block; }
+  #nav-check { display: none; }
+  .mobile-panel { display: none; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    background: radial-gradient(120% 160% at 85% -10%, oklch(0.32 0.07 235 / 1), var(--navy-dark) 55%);
+    color: var(--white);
+    overflow: hidden;
+    padding: clamp(4rem, 9vw, 7.5rem) 0 clamp(3.5rem, 7vw, 6rem);
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle, oklch(1 0 0 / 0.14) 1.5px, transparent 1.5px);
+    background-size: 26px 26px;
+    -webkit-mask-image: linear-gradient(120deg, black, transparent 65%);
+            mask-image: linear-gradient(120deg, black, transparent 65%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: clamp(2.2rem, 4.6vw, 3.6rem);
+    color: var(--white);
+  }
+  .hero h1 em { font-style: normal; color: var(--gold); }
+  .hero p.lead {
+    font-size: 1.14rem;
+    color: oklch(1 0 0 / 0.76);
+    max-width: 46ch;
+    margin-bottom: 2rem;
+  }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.3rem; }
+  .hero-stats { display: flex; gap: clamp(1.5rem, 4vw, 2.8rem); flex-wrap: wrap; }
+  .hero-stats div strong {
+    display: block;
+    font-family: var(--display);
+    font-size: 1.7rem;
+    color: var(--white);
+  }
+  .hero-stats div span { font-size: .82rem; color: oklch(1 0 0 / 0.6); }
+
+  .hero-card {
+    position: relative;
+    background: oklch(1 0 0 / 0.06);
+    border: 1px solid var(--line-on-navy);
+    padding: 1.8rem;
+    backdrop-filter: blur(6px);
+  }
+  .hero-card-title { font-family: var(--display); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.1rem; }
+  .hero-steps { display: flex; flex-direction: column; gap: .9rem; }
+  .hero-step { display: flex; gap: .85rem; align-items: flex-start; }
+  .hero-step .num {
+    flex: none;
+    width: 28px; height: 28px;
+    background: oklch(1 0 0 / 0.1);
+    color: var(--white);
+    font-family: var(--display);
+    font-size: .85rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .hero-step p { margin: 0; font-size: .89rem; color: oklch(1 0 0 / 0.82); }
+  .hero-step strong { display: block; color: var(--white); font-size: .93rem; margin-bottom: .1rem; }
+
+  /* trust strip: scrolling marquee (text placeholders — swap spans for <img> logos later) */
+  .trust-strip { background: var(--navy); border-top: 1px solid var(--line-on-navy); overflow: hidden; }
+  .trust-inner {
+    width: min(1180px, 100% - 2.5rem);
+    margin-inline: auto;
+    padding: 1.1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .trust-label {
+    font-size: .78rem; letter-spacing: .08em; text-transform: uppercase;
+    color: oklch(1 0 0 / 0.5); font-weight: 700; flex: none;
+    font-family: var(--display);
+  }
+  .trust-track-mask {
+    flex: 1;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+            mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  }
+  .trust-track {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    width: max-content;
+    animation: trust-scroll 28s linear infinite;
+  }
+  .trust-strip:hover .trust-track { animation-play-state: paused; }
+  .trust-track span {
+    font-family: var(--display);
+    font-size: .88rem;
+    font-weight: 700;
+    color: oklch(1 0 0 / 0.72);
+    letter-spacing: .02em;
+    white-space: nowrap;
+  }
+  @keyframes trust-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ---------- Services ---------- */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 1.4rem;
+  }
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    padding: 1.75rem;
+    transition: border-color .15s ease;
+  }
+  .service-card:hover { border-color: var(--gold); }
+  .service-icon {
+    width: 44px; height: 44px;
+    background: var(--navy);
+    color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.1rem;
+  }
+  .service-icon svg { width: 22px; height: 22px; }
+  .service-card h3 { font-size: 1.03rem; color: var(--ink); margin-bottom: .5rem; }
+  .service-card p { font-size: .91rem; color: var(--ink-soft); margin-bottom: 1.1rem; }
+
+  /* ---------- Testimonials ---------- */
+  .testimonials { background: var(--navy-dark); color: var(--white); }
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.4rem;
+  }
+  .testi-card {
+    background: oklch(1 0 0 / 0.04);
+    border: 1px solid var(--line-on-navy);
+    padding: 1.9rem;
+  }
+  .stars { display: flex; gap: .2rem; color: var(--gold); margin-bottom: 1rem; }
+  .stars svg { width: 16px; height: 16px; }
+  .testi-card p.quote { font-size: 1rem; color: oklch(1 0 0 / 0.88); margin-bottom: 1.4rem; }
+  .testi-person { display: flex; align-items: center; gap: .8rem; }
+  .testi-avatar {
+    width: 42px; height: 42px;
+    background: var(--gold);
+    color: var(--navy-dark);
+    font-family: var(--display);
+    font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    font-size: .95rem;
+    flex: none;
+  }
+  .testi-person strong { display: block; font-size: .92rem; color: var(--white); }
+  .testi-person span { font-size: .8rem; color: oklch(1 0 0 / 0.6); }
+
+  /* ---------- Process ---------- */
+  .process { background: var(--paper-alt); }
+  .process-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .process-item {
+    background: var(--paper-alt);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+  }
+  .process-num {
+    font-family: var(--display);
+    font-size: .85rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    color: var(--gold-ink);
+    text-transform: uppercase;
+  }
+  .process-item h3 { font-size: 1.05rem; color: var(--ink); margin-bottom: 0; }
+  .process-item p { color: var(--ink-soft); font-size: .89rem; margin-bottom: 0; }
+
+  /* ---------- Blog ---------- */
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.4rem;
+  }
+  .blog-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+  }
+  .blog-thumb {
+    height: 150px;
+    background: linear-gradient(135deg, var(--navy), oklch(0.4 0.1 230));
+    position: relative;
+  }
+  .blog-thumb::after {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle, oklch(1 0 0 / 0.16) 1.5px, transparent 1.5px);
+    background-size: 20px 20px;
+  }
+  .blog-card .body { padding: 1.5rem 1.5rem 1.7rem; flex: 1; display: flex; flex-direction: column; }
+  .blog-card h3 { font-size: 1.02rem; color: var(--ink); margin-bottom: .55rem; }
+  .blog-card p { font-size: .9rem; color: var(--ink-soft); margin-bottom: 1.2rem; flex: 1; }
+
+  /* ---------- FAQ ---------- */
+  .faq-list { max-width: 820px; margin-inline: auto; display: flex; flex-direction: column; gap: .8rem; }
+  details.faq {
+    background: var(--white);
+    border: 1px solid var(--line);
+    padding: 0;
+  }
+  details.faq summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-weight: 600;
+    font-size: .98rem;
+    color: var(--ink);
+  }
+  details.faq summary::-webkit-details-marker { display: none; }
+  details.faq summary .plus {
+    flex: none;
+    width: 26px; height: 26px;
+    border: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+  details.faq summary .plus::before, details.faq summary .plus::after {
+    content: "";
+    position: absolute;
+    background: var(--gold-ink);
+  }
+  details.faq summary .plus::before { width: 10px; height: 2px; }
+  details.faq summary .plus::after { width: 2px; height: 10px; transition: transform .15s ease; }
+  details.faq[open] summary .plus::after { transform: rotate(90deg); }
+  details.faq[open] summary .plus { border-color: var(--gold); }
+  .faq-body { padding: 0 1.4rem 1.3rem; color: var(--ink-soft); font-size: .93rem; max-width: 72ch; }
+
+  /* ---------- CTA / Contact ---------- */
+  .cta { background: var(--navy-dark); color: var(--white); }
+  .cta-inner {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  .cta h2 { color: var(--white); font-size: clamp(1.6rem, 3.4vw, 2.3rem); }
+  .cta p { color: oklch(1 0 0 / 0.72); font-size: 1.02rem; }
+  .cta-details { display: flex; flex-direction: column; gap: .9rem; margin-top: 1.6rem; }
+  .cta-details div { display: flex; gap: .8rem; align-items: flex-start; font-size: .92rem; color: oklch(1 0 0 / 0.85); }
+  .cta-details svg { width: 18px; height: 18px; flex: none; margin-top: .2rem; color: var(--gold); }
+
+  .proposal-card {
+    background: var(--white);
+    color: var(--ink);
+    border: 1px solid var(--line);
+    padding: 1.9rem;
+  }
+  .proposal-card h3 { font-size: 1.2rem; margin-bottom: 1.2rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
+  .field { display: flex; flex-direction: column; gap: .35rem; margin-bottom: .9rem; }
+  .field label { font-size: .8rem; font-weight: 600; color: var(--ink-soft); }
+  .field select, .field input, .field textarea {
+    font-family: var(--body);
+    font-size: .92rem;
+    padding: .75em .9em;
+    border-radius: 0;
+    border: 1.5px solid var(--line);
+    background: transparent;
+    color: var(--ink);
+  }
+  .field select:focus, .field input:focus, .field textarea:focus {
+    outline: 2px solid var(--gold);
+    outline-offset: 1px;
+  }
+  .field textarea { resize: vertical; min-height: 80px; font-family: var(--body); }
+  .proposal-card .btn { width: 100%; margin-top: .3rem; }
+  .form-note { font-size: .78rem; color: var(--ink-soft); margin-top: .8rem; text-align: center; }
+  #form-success {
+    display: none;
+    background: oklch(0.94 0.05 155);
+    color: oklch(0.32 0.09 155);
+    border-radius: 10px;
+    padding: .8em 1em;
+    font-size: .87rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  #form-success.show { display: block; }
+
+  /* ---------- Footer ---------- */
+  footer.site { background: var(--navy-dark); color: oklch(1 0 0 / 0.7); padding-top: 4rem; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.3fr repeat(4, 1fr);
+    gap: 2rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--line-on-navy);
+  }
+  .footer-brand .brand { margin-bottom: .9rem; }
+  .footer-brand p { font-size: .87rem; color: oklch(1 0 0 / 0.55); max-width: 30ch; }
+  .footer-col h4 {
+    font-family: var(--display);
+    font-size: .78rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 1.1rem;
+  }
+  .footer-col ul { display: flex; flex-direction: column; gap: .65rem; }
+  .footer-col a { font-size: .87rem; color: oklch(1 0 0 / 0.6); }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-cities { padding: 2rem 0; border-bottom: 1px solid var(--line-on-navy); }
+  .footer-cities h4 {
+    font-family: var(--display); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--white); margin-bottom: 1rem;
+  }
+  .city-list { display: flex; flex-wrap: wrap; gap: .6rem .9rem; }
+  .city-list a { font-size: .84rem; color: oklch(1 0 0 / 0.55); }
+  .city-list a:hover { color: var(--gold); }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.6rem 0 2rem;
+    font-size: .82rem;
+    color: oklch(1 0 0 / 0.45);
+  }
+  .footer-bottom .legal-links { display: flex; gap: 1.4rem; }
+  .footer-bottom .legal-links a { color: oklch(1 0 0 / 0.55); }
+  .footer-bottom .legal-links a:hover { color: var(--gold); }
+
+  /* ---------- Floating dock ---------- */
+  .dock {
+    position: fixed;
+    right: 1.1rem;
+    bottom: 1.1rem;
+    z-index: 70;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+  }
+  .dock a {
+    width: 46px; height: 46px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--navy-dark);
+    color: var(--white);
+    border: 1px solid var(--line-on-navy);
+    box-shadow: 0 10px 24px -10px oklch(0.2 0.05 255 / 0.5);
+  }
+  .dock a.wa { background: oklch(0.6 0.15 150); }
+  .dock a.call { background: var(--gold); color: var(--navy-dark); }
+  .dock a svg { width: 20px; height: 20px; }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .cta-inner { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: repeat(2, 1fr); }
+    .process-list { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 760px) {
+    .nav-bar { height: 68px; padding: 0 1.25rem; }
+    .nav-links { display: none; }
+    .burger { display: flex; }
+    #nav-check:checked ~ .mobile-panel { max-height: 640px; padding-top: .5rem; padding-bottom: 1rem; }
+    .mobile-panel {
+      display: block;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .25s ease;
+      background: var(--navy-dark);
+      border-top: 1px solid var(--line-on-navy);
+    }
+    .mobile-panel-inner { display: flex; flex-direction: column; gap: .2rem; width: min(1180px, 100% - 2.5rem); margin-inline: auto; }
+    .mobile-panel a.nav-plain, .mobile-panel a.nav-cta { padding: .75em .2em; font-size: .95rem; color: oklch(1 0 0 / 0.85); border-bottom: 1px solid var(--line-on-navy); display: block; }
+    .mobile-panel a.nav-cta { background: transparent; color: var(--gold); font-weight: 700; padding: .75em .2em; border-bottom: none; }
+    .mobile-panel details { border-bottom: 1px solid var(--line-on-navy); }
+    .mobile-panel summary {
+      list-style: none; cursor: pointer; padding: .75em .2em;
+      font-size: .95rem; color: oklch(1 0 0 / 0.85); font-weight: 600;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .mobile-panel summary::-webkit-details-marker { display: none; }
+    .mobile-panel details[open] summary { color: var(--white); }
+    .mobile-panel .sub-links { display: flex; flex-direction: column; gap: .1rem; padding: 0 0 .6em 1em; }
+    .mobile-panel .sub-links a { padding: .5em .2em; font-size: .875rem; color: oklch(1 0 0 / 0.65); border-bottom: none; }
+    .process-list { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 520px) {
+    .footer-top { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- JD hero ---------- */
+  .jd-hero {
+    position: relative;
+    background: radial-gradient(120% 160% at 85% -10%, oklch(0.32 0.07 235 / 1), var(--navy-dark) 55%);
+    color: var(--white);
+    overflow: hidden;
+    padding: clamp(3.5rem, 7vw, 5.5rem) 0 clamp(2.6rem, 5vw, 4rem);
+  }
+  .jd-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, oklch(1 0 0 / 0.14) 1.5px, transparent 1.5px);
+    background-size: 26px 26px;
+    -webkit-mask-image: linear-gradient(120deg, black, transparent 65%);
+            mask-image: linear-gradient(120deg, black, transparent 65%);
+    pointer-events: none;
+  }
+  .jd-hero .wrap { position: relative; max-width: 760px; }
+  .jd-hero h1 { font-size: clamp(2rem, 4.2vw, 3.1rem); color: var(--white); margin-bottom: .8rem; }
+  .jd-hero p.lead { font-size: 1.08rem; color: oklch(1 0 0 / 0.76); max-width: 60ch; margin-bottom: 2rem; }
+
+  .jd-search-wrap { position: relative; max-width: 480px; }
+  .jd-search-wrap input {
+    width: 100%;
+    font-family: var(--body);
+    font-size: .95rem;
+    padding: .95em 1.2em .95em 2.8em;
+    border: 1.5px solid var(--line-on-navy);
+    background: oklch(1 0 0 / 0.06);
+    color: var(--white);
+    backdrop-filter: blur(6px);
+  }
+  .jd-search-wrap input::placeholder { color: oklch(1 0 0 / 0.45); }
+  .jd-search-wrap input:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
+  .jd-search-wrap svg {
+    position: absolute; left: 1em; top: 50%; transform: translateY(-50%);
+    width: 17px; height: 17px; color: oklch(1 0 0 / 0.5); pointer-events: none;
+  }
+  #jd-count { font-size: .82rem; color: oklch(1 0 0 / 0.6); margin-top: .7rem; }
+
+  /* ---------- Quick options ---------- */
+  .jd-options-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; }
+  .jd-option-card { background: var(--white); border: 1px solid var(--line); padding: 1.7rem; display: flex; flex-direction: column; gap: .6rem; }
+  .jd-option-card h3 { font-size: 1.02rem; color: var(--ink); margin: 0; }
+  .jd-option-card p { font-size: .89rem; color: var(--ink-soft); margin-bottom: .4rem; }
+  .jd-option-actions { display: flex; gap: .7rem; flex-wrap: wrap; }
+
+  /* ---------- Category cards ---------- */
+  .jd-category-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.4rem; }
+  .jd-category-card { background: var(--white); border: 1px solid var(--line); padding: 1.7rem; transition: border-color .15s ease; }
+  .jd-category-card.jd-hidden { display: none; }
+  .jd-category-head { display: flex; align-items: center; gap: .9rem; margin-bottom: 1.2rem; }
+  .jd-category-head h3 { font-size: 1rem; color: var(--ink); margin: 0; }
+  .jd-category-head span { font-size: .78rem; color: var(--ink-soft); }
+  .jd-role-list { columns: 2 150px; column-gap: 1.2rem; }
+  .jd-role-list li { break-inside: avoid; margin-bottom: .1rem; }
+  .jd-role-list a {
+    display: block;
+    font-size: .865rem;
+    color: var(--ink-soft);
+    padding: .38em 0;
+    border-bottom: 1px solid transparent;
+  }
+  .jd-role-list a:hover { color: var(--gold-ink); }
+  .jd-role-list li.jd-hidden { display: none; }
+  #jd-empty { display: none; text-align: center; color: var(--ink-soft); padding: 2rem 0; }
+  #jd-empty.show { display: block; }
+
+  @media (max-width: 760px) {
+    .jd-options-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-bar">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-name">HiringGo</span>
+    </a>
+
+    <div class="nav-links">
+
+      <div class="dd-trigger">
+        <span class="dd-label">Services
+          <svg class="dd-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </span>
+        <div class="dd-panel">
+          <span class="dd-eyebrow">Services</span>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="Recruitment.html">Recruitment Services
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout">
+              <a href="Recruitment.html">Recruitment Services</a>
+              <a href="services.html#services">Recruitment Consultants</a>
+            </div>
+          </div>
+
+          <div class="dd-sub">
+            <a class="dd-item featured" href="StaffingServices.dc.html">Staffing Services
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout" style="min-width:250px">
+              <a href="services.html#services">Permanent IT Staffing Services</a>
+              <a href="services.html#services">Temporary IT Staffing Services</a>
+              <a href="services.html#services">IT Staffing Services</a>
+            </div>
+          </div>
+
+          <a class="dd-item" href="services.html#services">Outsourcing Services</a>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="services.html#services">Third Party Payroll
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout">
+              <a href="services.html#services">Payroll Outsourcing Services</a>
+              <a href="services.html#services">Payroll Solutions Company</a>
+              <a href="services.html#services">Payroll for Small Business</a>
+            </div>
+          </div>
+
+          <a class="dd-item" href="services.html#services">HR &amp; Recruitment Process Outsourcing</a>
+          <a class="dd-item" href="services.html#services">HR Solutions</a>
+          <a class="view-all-link" href="services.html#services">View all services &rarr;</a>
+        </div>
+      </div>
+
+      <div class="dd-trigger">
+        <span class="dd-label">Locations
+          <svg class="dd-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </span>
+        <div class="dd-panel" style="width:220px">
+          <span class="dd-eyebrow">Locations</span>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="services.html#locations">Delhi
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout" style="min-width:250px">
+              <a href="services.html#locations">IT Recruitment Agency in Delhi</a>
+              <a href="services.html#locations">IT Staffing Services in Delhi</a>
+              <a class="view-all" href="services.html#locations">View all services in Delhi &rarr;</a>
+            </div>
+          </div>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="services.html#locations">Gurgaon
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout" style="min-width:250px">
+              <a href="services.html#locations">IT Recruitment Agency in Gurgaon</a>
+              <a href="services.html#locations">IT Staffing Services in Gurgaon</a>
+              <a class="view-all" href="services.html#locations">View all services in Gurgaon &rarr;</a>
+            </div>
+          </div>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="services.html#locations">Noida
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout" style="min-width:250px">
+              <a href="services.html#locations">IT Recruitment Agency in Noida</a>
+              <a href="services.html#locations">IT Staffing Services in Noida</a>
+              <a class="view-all" href="services.html#locations">View all services in Noida &rarr;</a>
+            </div>
+          </div>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="services.html#locations">Mumbai
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout" style="min-width:250px">
+              <a href="services.html#locations">IT Recruitment Agency in Mumbai</a>
+              <a href="services.html#locations">IT Staffing Services in Mumbai</a>
+              <a class="view-all" href="services.html#locations">View all services in Mumbai &rarr;</a>
+            </div>
+          </div>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="bangalore.html">Bangalore
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout" style="min-width:250px">
+              <a href="bangalore.html">IT Recruitment Agency in Bangalore</a>
+              <a href="bangalore.html">IT Staffing Services in Bangalore</a>
+              <a class="view-all" href="bangalore.html">View all services in Bangalore &rarr;</a>
+            </div>
+          </div>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="services.html#locations">Pune
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout" style="min-width:250px">
+              <a href="services.html#locations">IT Recruitment Agency in Pune</a>
+              <a href="services.html#locations">IT Staffing Services in Pune</a>
+              <a class="view-all" href="services.html#locations">View all services in Pune &rarr;</a>
+            </div>
+          </div>
+
+          <div class="dd-sub">
+            <a class="dd-item" href="services.html#locations">Hyderabad
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+            </a>
+            <div class="dd-flyout" style="min-width:250px">
+              <a href="services.html#locations">IT Recruitment Agency in Hyderabad</a>
+              <a href="services.html#locations">IT Staffing Services in Hyderabad</a>
+              <a class="view-all" href="services.html#locations">View all services in Hyderabad &rarr;</a>
+            </div>
+          </div>
+
+          <a class="view-all-link" href="services.html#locations">All India Locations &rarr;</a>
+        </div>
+      </div>
+
+      <a class="nav-plain" href="blogs.html">Blog</a>
+      <a class="nav-plain" href="contact-us.html#jobseeker">Job Seeker</a>
+      <a class="nav-plain" href="contact-us.html">Contact</a>
+    </div>
+
+    <div class="header-actions">
+      <a href="contact-us.html" class="nav-cta">GET IN TOUCH</a>
+      <label for="nav-check" class="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </label>
+    </div>
+  </div>
+
+  <div class="mobile-panel">
+    <div class="mobile-panel-inner">
+      <details>
+        <summary>Services</summary>
+        <div class="sub-links">
+          <a href="Recruitment.html">Recruitment Services</a>
+          <a href="services.html#services">Recruitment Consultants</a>
+          <a href="StaffingServices.dc.html">Staffing Services</a>
+          <a href="services.html#services">Outsourcing Services</a>
+          <a href="services.html#services">Third Party Payroll</a>
+          <a href="services.html#services">HR &amp; RPO</a>
+          <a href="services.html#services">HR Solutions</a>
+        </div>
+      </details>
+      <details>
+        <summary>Locations</summary>
+        <div class="sub-links">
+          <a href="services.html#locations">Delhi</a>
+          <a href="services.html#locations">Gurgaon</a>
+          <a href="services.html#locations">Noida</a>
+          <a href="services.html#locations">Mumbai</a>
+          <a href="bangalore.html">Bangalore</a>
+          <a href="services.html#locations">Pune</a>
+          <a href="services.html#locations">Hyderabad</a>
+        </div>
+      </details>
+      <a class="nav-plain" href="blogs.html">Blog</a>
+      <a class="nav-plain" href="contact-us.html#jobseeker">Job Seeker</a>
+      <a class="nav-plain" href="contact-us.html">Contact</a>
+      <a class="nav-cta" href="contact-us.html">GET IN TOUCH</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- JD HERO -->
+  <section class="jd-hero">
+    <div class="wrap">
+      <div class="eyebrow" style="color:var(--gold)">Job Description Templates</div>
+      <h1>Best job description templates your company needs today</h1>
+      <p class="lead">HiringGo maintains a growing library of ready-to-use job description templates across development, engineering, design, analytics, and leadership roles &mdash; so your team can publish an accurate JD in minutes instead of writing one from scratch.</p>
+      <div class="jd-search-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="text" id="jd-search" placeholder="Search a role, e.g. &ldquo;Java Developer&rdquo;" aria-label="Search job description templates" autocomplete="off">
+      </div>
+      <div id="jd-count">Showing all 82 roles across 11 categories</div>
+    </div>
+  </section>
+
+  <!-- QUICK OPTIONS -->
+  <section style="padding-top:2.4rem; padding-bottom:0">
+    <div class="wrap">
+      <div class="jd-options-grid">
+        <div class="jd-option-card">
+          <h3>Are you a job seeker?</h3>
+          <p>Looking for a role that matches one of these job descriptions? Send us your updated resume and our recruitment team will reach out with matching openings.</p>
+          <div class="jd-option-actions">
+            <a href="mailto:jobs@hiringgo.com" class="btn btn-gold">Email jobs@hiringgo.com</a>
+            <a href="https://wa.me/911234567890" target="_blank" rel="noopener" class="btn btn-outline-navy">Chat on WhatsApp</a>
+          </div>
+        </div>
+        <div class="jd-option-card">
+          <h3>Are you hiring?</h3>
+          <p>Need a job description for a role that isn&rsquo;t listed below, or want it tailored to your company&rsquo;s exact requirements? Our team will draft it for you.</p>
+          <div class="jd-option-actions">
+            <a href="mailto:hello@hiringgo.com" class="btn btn-gold">Email hello@hiringgo.com</a>
+            <a href="contact-us.html" class="btn btn-outline-navy">Get in touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section>
+    <div class="wrap">
+
+      <div class="section-head">
+        <div class="eyebrow">Browse by Category</div>
+        <h2>11 categories, 82+ ready-to-use JD templates</h2>
+        <p>Click any role to request that job description template by email, or use the search box above to jump straight to a title.</p>
+      </div>
+      <div class="jd-category-grid" id="jd-grid">
+        <div class="jd-category-card" data-category="Developer">
+          <div class="jd-category-head">
+            <div class="service-icon jd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13 6l-2 12"/></svg></div>
+            <div>
+              <h3>Developer</h3>
+              <span>38 roles</span>
+            </div>
+          </div>
+          <ul class="jd-role-list">
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Python%20Developer">Python Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Java%20Developer">Java Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20React%20JS%20Developer">React JS Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20PHP%20Developer">PHP Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Swift%20Developer">Swift Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20SQL%20Server%20DBA">SQL Server DBA</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Java%20Script%20Developer">Java Script Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Ruby%20Rails%20Developer">Ruby Rails Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Linux%20Developer">Linux Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20SQL%20Developer">SQL Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Magento%20Developer">Magento Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Dot%20Net%20Developer">Dot Net Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20AWS%20Developer">AWS Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20React%20Native%20Developer">React Native Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Backbone%20JS%20Developer">Backbone JS Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Blockchain%20Developer">Blockchain Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Node%20Js%20Developer">Node Js Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Core%20Java%20Developers">Core Java Developers</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Web%20developer">Web developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20ASP.NET%20Developer">ASP.NET Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Back-End%20Web%20Developer">Back-End Web Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20C%2B%2B%20Developer">C++ Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Drupal%20Developer">Drupal Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Angular%20JS%20Developer">Angular JS Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Mobile%20Application%20Developers">Mobile Application Developers</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20WordPress%20Developer">WordPress Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Full%20Stack%20Developer">Full Stack Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Application%20Developer">Application Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Business%20Intelligence%20Developer">Business Intelligence Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20ASP.%20NET%20MVC">ASP. NET MVC</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Machine%20Learning%20Developer">Machine Learning Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20MySQL%20developer">MySQL developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20C%23%20developer">C# developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Senior%20Web%20Developer">Senior Web Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Senior%20Software%20Developer">Senior Software Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Webmaster">Webmaster</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Web%20Programmer">Web Programmer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Database%20Developer">Database Developer</a></li>
+          </ul>
+        </div>
+        <div class="jd-category-card" data-category="Engineer">
+          <div class="jd-category-head">
+            <div class="service-icon jd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"/><path d="M19.4 13.5a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.04 1.56V20a2 2 0 1 1-4 0v-.09A1.7 1.7 0 0 0 8.96 18.36a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.5 13.9a1.7 1.7 0 0 0-1.56-1.04H2.8a2 2 0 1 1 0-4h.09A1.7 1.7 0 0 0 4.5 8.6a1.7 1.7 0 0 0-.34-1.87l-.06-.06A2 2 0 1 1 6.93 3.84l.06.06A1.7 1.7 0 0 0 8.86 4.24H8.9A1.7 1.7 0 0 0 9.94 2.68V2.6a2 2 0 1 1 4 0v.09A1.7 1.7 0 0 0 15 4.24a1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87v.03c.24.62.82 1.04 1.56 1.04h.08a2 2 0 1 1 0 4h-.09A1.7 1.7 0 0 0 19.4 13.5Z"/></svg></div>
+            <div>
+              <h3>Engineer</h3>
+              <span>8 roles</span>
+            </div>
+          </div>
+          <ul class="jd-role-list">
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20DevOps%20Engineer">DevOps Engineer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Software%20Engineer">Software Engineer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Big%20Data%20Engineer">Big Data Engineer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20QA%20Engineer">QA Engineer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Support%20Engineer">Support Engineer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Senior%20Database%20Engineer">Senior Database Engineer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Senior%20Backend%20Engineer">Senior Backend Engineer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Cloud%20Engineer">Cloud Engineer</a></li>
+          </ul>
+        </div>
+        <div class="jd-category-card" data-category="Designer">
+          <div class="jd-category-head">
+            <div class="service-icon jd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
+            <div>
+              <h3>Designer</h3>
+              <span>11 roles</span>
+            </div>
+          </div>
+          <ul class="jd-role-list">
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Interaction%20Designer">Interaction Designer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Product%20Designer">Product Designer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Visual%20Designer">Visual Designer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Digital%20Designer">Digital Designer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Graphic%20Designer">Graphic Designer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Adobe%20Illustrator">Adobe Illustrator</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20UX%20researcher">UX researcher</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20User%20Interface%20%28UI%29%20Designer">User Interface (UI) Designer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Web%20Designer">Web Designer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Junior%20Designer">Junior Designer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Senior%20Designer">Senior Designer</a></li>
+          </ul>
+        </div>
+        <div class="jd-category-card" data-category="Analyst">
+          <div class="jd-category-head">
+            <div class="service-icon jd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></div>
+            <div>
+              <h3>Analyst</h3>
+              <span>5 roles</span>
+            </div>
+          </div>
+          <ul class="jd-role-list">
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Data%20scientist">Data scientist</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Data%20modeling">Data modeling</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Data%20Analyst">Data Analyst</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Business%20Analyst">Business Analyst</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20IT%20Analyst">IT Analyst</a></li>
+          </ul>
+        </div>
+        <div class="jd-category-card" data-category="Director">
+          <div class="jd-category-head">
+            <div class="service-icon jd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 15.4l-4.8 2.5.9-5.4L4.2 8.7l5.4-.8z"/></svg></div>
+            <div>
+              <h3>Director</h3>
+              <span>4 roles</span>
+            </div>
+          </div>
+          <ul class="jd-role-list">
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Creative%20Director">Creative Director</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Art%20Director">Art Director</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Design%20Director">Design Director</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20IT%20Director">IT Director</a></li>
+          </ul>
+        </div>
+        <div class="jd-category-card" data-category="Security">
+          <div class="jd-category-head">
+            <div class="service-icon jd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <div>
+              <h3>Security</h3>
+              <span>2 roles</span>
+            </div>
+          </div>
+          <ul class="jd-role-list">
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20System%20Security%20Expert">System Security Expert</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Cyber%20Security%20Specialist">Cyber Security Specialist</a></li>
+          </ul>
+        </div>
+        <div class="jd-category-card" data-category="Frontend Developer">
+          <div class="jd-category-head">
+            <div class="service-icon jd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><circle cx="6" cy="6.5" r=".6" fill="currentColor"/><circle cx="8.4" cy="6.5" r=".6" fill="currentColor"/></svg></div>
+            <div>
+              <h3>Frontend Developer</h3>
+              <span>3 roles</span>
+            </div>
+          </div>
+          <ul class="jd-role-list">
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20jQuery%20Developer">jQuery Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20HTML%205">HTML 5</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Front-end%20Developer">Front-end Developer</a></li>
+          </ul>
+        </div>
+        <div class="jd-category-card" data-category="Software Developer">
+          <div class="jd-category-head">
+            <div class="service-icon jd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+            <div>
+              <h3>Software Developer</h3>
+              <span>3 roles</span>
+            </div>
+          </div>
+          <ul class="jd-role-list">
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Docker%20Developer">Docker Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Salesforce%20Developer">Salesforce Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Software%20Development%20Intern">Software Development Intern</a></li>
+          </ul>
+        </div>
+        <div class="jd-category-card" data-category="App Developer">
+          <div class="jd-category-head">
+            <div class="service-icon jd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
+            <div>
+              <h3>App Developer</h3>
+              <span>3 roles</span>
+            </div>
+          </div>
+          <ul class="jd-role-list">
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Android%20Developer">Android Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20IOS%20Developer">IOS Developer</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Mobile%20app%20Developer">Mobile app Developer</a></li>
+          </ul>
+        </div>
+        <div class="jd-category-card" data-category="Architect">
+          <div class="jd-category-head">
+            <div class="service-icon jd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-7h6v7"/></svg></div>
+            <div>
+              <h3>Architect</h3>
+              <span>2 roles</span>
+            </div>
+          </div>
+          <ul class="jd-role-list">
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20cloud%20architect">cloud architect</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20Data%20Architect">Data Architect</a></li>
+          </ul>
+        </div>
+        <div class="jd-category-card" data-category="Manager">
+          <div class="jd-category-head">
+            <div class="service-icon jd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20c1-3.6 3.6-5.6 6.5-5.6s5.5 2 6.5 5.6"/><circle cx="18" cy="8.5" r="2.4"/><path d="M15.8 14.6c2.4.4 4.2 2.2 5 5"/></svg></div>
+            <div>
+              <h3>Manager</h3>
+              <span>3 roles</span>
+            </div>
+          </div>
+          <ul class="jd-role-list">
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20IT%20Operation%20Manager">IT Operation Manager</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20IT%20Consultant">IT Consultant</a></li>
+            <li><a href="mailto:jobs@hiringgo.com?subject=Job%20Description%20Request%3A%20IT%20Manager">IT Manager</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="jd-empty">No roles match your search. Try a different keyword, or <a href="mailto:jobs@hiringgo.com" style="color:var(--gold-ink); font-weight:600">email us</a> for a custom JD.</div>
+    </div>
+  </section>
+
+  <!-- CUSTOM JD CTA -->
+  <section class="careers-cta">
+    <div class="wrap careers-inner">
+      <div>
+        <h2>Can&rsquo;t find the exact role you need?</h2>
+        <p>We add new job description templates regularly and can draft a custom JD for any role, seniority, or industry within one business day.</p>
+      </div>
+      <div class="careers-actions">
+        <a href="mailto:hello@hiringgo.com?subject=Custom%20Job%20Description%20Request" class="btn btn-gold">Request a custom JD</a>
+        <a href="contact-us.html" class="btn btn-outline-navy">Contact our team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="wrap">
+      <div class="section-head center">
+        <div class="eyebrow">FAQ</div>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq" open>
+          <summary>What is a job description template?<span class="plus"></span></summary>
+          <div class="faq-body">A job description template is a ready-made outline covering a role&rsquo;s responsibilities, required skills, experience, and qualifications &mdash; built so you can adapt it to your company and publish a job posting quickly instead of writing one from scratch.</div>
+        </details>
+        <details class="faq">
+          <summary>How do I request a job description template?<span class="plus"></span></summary>
+          <div class="faq-body">Click any role name below to open a pre-filled email to jobs@hiringgo.com, or search for a role using the search box above. We&rsquo;ll send you the full template shortly after.</div>
+        </details>
+        <details class="faq">
+          <summary>Can I get a custom job description for a role that isn&rsquo;t listed?<span class="plus"></span></summary>
+          <div class="faq-body">Yes. Email hello@hiringgo.com with the role, seniority level, and any must-have skills, and our recruitment team will draft a custom JD tailored to your requirements, typically within one business day.</div>
+        </details>
+        <details class="faq">
+          <summary>Are these templates free to use?<span class="plus"></span></summary>
+          <div class="faq-body">Yes, all job description templates are free to request and use for your own hiring. There&rsquo;s no charge to browse this page or request a template.</div>
+        </details>
+        <details class="faq">
+          <summary>I&rsquo;m a candidate &mdash; can I apply using these job descriptions?<span class="plus"></span></summary>
+          <div class="faq-body">These templates are meant for employers drafting job postings. If you&rsquo;re a candidate looking for a role, send your updated resume to jobs@hiringgo.com and our team will reach out with matching openings.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site" id="locations">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark"></span>
+          <span class="brand-name">HiringGo</span>
+        </a>
+        <p>Reliable, efficient workforce solutions &mdash; manpower supply, IT staffing, and HR process management for growing businesses.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Hire Developers</h4>
+        <ul>
+          <li><a href="services.html#services">Full Stack Developer</a></li>
+          <li><a href="services.html#services">Java Developer</a></li>
+          <li><a href="services.html#services">Python Developer</a></li>
+          <li><a href="services.html#services">React Developer</a></li>
+          <li><a href="services.html#services">DevOps Engineer</a></li>
+          <li><a href="services.html#services">Data Scientist</a></li>
+          <li><a href="services.html#services">View all roles &rarr;</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Job Descriptions</h4>
+        <ul>
+          <li><a href="#top">Software Engineer JD</a></li>
+          <li><a href="#top">QA Engineer JD</a></li>
+          <li><a href="#top">Product Manager JD</a></li>
+          <li><a href="#top">UI/UX Designer JD</a></li>
+          <li><a href="#top">HR Manager JD</a></li>
+          <li><a href="#top">View all JDs &rarr;</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="Recruitment.html">IT Recruitment Services</a></li>
+          <li><a href="StaffingServices.dc.html">Permanent IT Staffing</a></li>
+          <li><a href="StaffingServices.dc.html">Temporary IT Staffing</a></li>
+          <li><a href="services.html#services">IT Outsourcing Services</a></li>
+          <li><a href="services.html#services">Recruitment Consultants</a></li>
+          <li><a href="services.html#services">HR Solutions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="blogs.html">Blog</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="services.html#services">Vendor Empanelment</a></li>
+          <li><a href="services.html#services">Campus Placement</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-cities">
+      <h4>Our presence</h4>
+      <div class="city-list">
+        <a href="services.html#locations">Delhi</a>
+        <a href="services.html#locations">Mumbai</a>
+        <a href="bangalore.html">Bangalore</a>
+        <a href="services.html#locations">Chennai</a>
+        <a href="services.html#locations">Hyderabad</a>
+        <a href="services.html#locations">Pune</a>
+        <a href="services.html#locations">Ahmedabad</a>
+        <a href="services.html#locations">Gurgaon</a>
+        <a href="services.html#locations">Noida</a>
+        <a href="services.html#locations">Jaipur</a>
+        <a href="services.html#locations">Chandigarh</a>
+        <a href="services.html#locations">Kochi</a>
+        <a href="services.html#locations">Lucknow</a>
+        <a href="services.html#locations">Indore</a>
+        <a href="services.html#locations">Visakhapatnam</a>
+        <a href="services.html#locations">Thane</a>
+        <a href="services.html#locations">Ranchi</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        &copy; 2013&ndash;2026 hiringgo.com. All Rights Reserved.<br>
+        Aaganera Consulting Private Limited &mdash; Unit No.538, 5th Floor, JMD Megapolis, Sohna Road, Gurugram-122018
+      </div>
+      <div class="legal-links">
+        <a href="services.html#top">Privacy Policy</a>
+        <a href="services.html#top">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="dock">
+  <a href="tel:+911234567890" class="call" aria-label="Call now" title="Call now">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 2.9a2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.3-1.4a2 2 0 0 1 2.1-.4c.9.4 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg>
+  </a>
+  <a href="https://wa.me/911234567890" class="wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.1 8.1 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1s-.7.8-.9 1c-.2.2-.3.2-.6.1a6.6 6.6 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.2-.5s0-.4-.1-.5c-.1-.1-.6-1.5-.8-2-.2-.5-.4-.5-.6-.5h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-1 2.2c0 1.3 1 2.6 1.1 2.7.1.2 2 3 4.7 4.2a15.7 15.7 0 0 0 1.6.6 3.8 3.8 0 0 0 1.7.1c.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2s-.2-.2-.4-.3z"/></svg>
+  </a>
+  <a href="contact-us.html" aria-label="Send a query" title="Contact us">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </a>
+</div>
+
+<script>
+  var navCheck = document.getElementById('nav-check');
+  if (navCheck) {
+    document.querySelectorAll('.mobile-panel a').forEach(function(a) {
+      a.addEventListener('click', function () { navCheck.checked = false; });
+    });
+  }
+
+  (function () {
+    var input = document.getElementById('jd-search');
+    var count = document.getElementById('jd-count');
+    var empty = document.getElementById('jd-empty');
+    var cards = Array.prototype.slice.call(document.querySelectorAll('.jd-category-card'));
+    if (!input || !cards.length) return;
+
+    var totalRoles = 0;
+    cards.forEach(function (card) {
+      totalRoles += card.querySelectorAll('.jd-role-list li').length;
+    });
+    var totalCategories = cards.length;
+
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toLowerCase();
+      var visibleRoles = 0;
+      var visibleCategories = 0;
+
+      cards.forEach(function (card) {
+        var items = card.querySelectorAll('.jd-role-list li');
+        var anyVisible = false;
+        items.forEach(function (li) {
+          var text = li.textContent.trim().toLowerCase();
+          var match = !q || text.indexOf(q) !== -1;
+          li.classList.toggle('jd-hidden', !match);
+          if (match) { anyVisible = true; visibleRoles++; }
+        });
+        card.classList.toggle('jd-hidden', !anyVisible);
+        if (anyVisible) visibleCategories++;
+      });
+
+      if (!q) {
+        count.textContent = 'Showing all ' + totalRoles + ' roles across ' + totalCategories + ' categories';
+      } else if (visibleRoles === 0) {
+        count.textContent = 'No roles matched “' + input.value.trim() + '”';
+      } else {
+        count.textContent = 'Showing ' + visibleRoles + ' role' + (visibleRoles === 1 ? '' : 's') + ' in ' + visibleCategories + ' categor' + (visibleCategories === 1 ? 'y' : 'ies');
+      }
+
+      empty.classList.toggle('show', visibleRoles === 0);
+    });
+  })();
+</script>
+
+</body>
+</html>
